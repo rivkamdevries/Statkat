@@ -1,0 +1,12 @@
+---
+name:  repeated
+title: Repeated measurements
+jrs:   '1.1'
+
+items:
+    - name:  advice
+      title: Advice
+      type: Html
+      visible: (text)
+
+...

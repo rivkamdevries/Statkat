@@ -1,0 +1,12 @@
+---
+name:  correlational
+title: Correlational research
+jrs:   '1.1'
+
+items:
+    - name:  advice
+      title: Advice
+      type: Html
+      visible: (text)
+
+...

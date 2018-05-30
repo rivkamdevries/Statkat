@@ -1,0 +1,16 @@
+title: Repeated measurements
+name: repeated
+jus: '2.0'
+stage: 0
+compilerMode: aggressive
+children:
+  - type: VariableSupplier
+    persistentItems: false
+    stretchFactor: 1
+    children:
+      - type: TargetLayoutBox
+        label: Related variables
+        children:
+          - type: VariablesListBox
+            name: variables
+            isTarget: true

@@ -1,0 +1,14 @@
+---
+name:  single
+title: Single variable
+menuGroup: Statkat
+version: '1.0.0'
+jas: '1.1'
+
+options:
+    - name: data
+      type: Data
+
+    - name: var
+      title: Variable
+      type: Variable

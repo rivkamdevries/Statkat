@@ -1,0 +1,22 @@
+---
+name:  correlational
+title: Correlational research
+menuGroup: Statkat
+version: '1.0.0'
+jas: '1.1'
+
+options:
+    - name: data
+      type: Data
+
+    - name: dep
+      title: Variable 1 / dependent variable
+      type: Variable
+
+    - name: independents
+      title: Variable 2 / independent variables
+      type: Variables
+
+    - name: controls
+      title: Control variables
+      type: Variables

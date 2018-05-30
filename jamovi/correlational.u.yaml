@@ -1,0 +1,29 @@
+title: Correlational research
+name: correlational
+jus: '2.0'
+stage: 0
+compilerMode: aggressive
+children:
+  - type: VariableSupplier
+    persistentItems: false
+    stretchFactor: 1
+    children:
+      - type: TargetLayoutBox
+        label: Variable 1 / dependent variable
+        children:
+          - type: VariablesListBox
+            name: dep
+            maxItemCount: 1
+            isTarget: true
+      - type: TargetLayoutBox
+        label: Variable 2 / independent variables
+        children:
+          - type: VariablesListBox
+            name: independents
+            isTarget: true
+      - type: TargetLayoutBox
+        label: Control variables
+        children:
+          - type: VariablesListBox
+            name: controls
+            isTarget: true
