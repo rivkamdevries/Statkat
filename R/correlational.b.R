@@ -292,7 +292,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
                 else if (is.factor(dependent) && is.numeric(independent) && numberUniqueValuesDependent == 2) {
                     advice <- paste(startAdvice,
-                                    "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression</a> analysis
+                                    "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                     seems to be a good option for you! In order to perform this analysis, go to:
                                     <br><br>
                                     Regression > 2 Outcomes - Binomial
@@ -405,7 +405,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 if (is.factor(dependent) && numberUniqueValuesDependent == 2) {
                     if (any(independentNeedsDummy) && !any(independentDichotomous)) {
                         advice <- paste(startAdvice,
-                                         "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression</a> analysis
+                                         "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                          seems to be a good option for you! In order to perform this analysis, go to:
                                          <br><br>
                                          Regression > 2 Outcomes - Binomial",
@@ -415,7 +415,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else if (any(independentCategorical)) {
                         advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression</a> analysis
+                                        "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > 2 Outcomes - Binomial",
@@ -424,7 +424,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else {
                         advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression</a> analysis
+                                        "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > 2 Outcomes - Binomial",
@@ -492,7 +492,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else if (any(independentNeedsDummy) && !any(independentDichotomous)) {
                         advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression</a> analysis
+                                        "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > Linear Regression",
@@ -501,7 +501,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else if (any(independentCategorical)) {
                         advice <-  paste(startAdvice,
-                                         "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression</a> analysis
+                                         "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
                                          seems to be a good option for you! In order to perform this analysis, go to:
                                          <br><br>
                                          Regression > Linear Regression",
@@ -510,7 +510,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else {
                         advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression</a> analysis
+                                        "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > Linear Regression",
@@ -557,7 +557,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 if (is.factor(dependent) && numberUniqueValuesDependent == 2) {
                     if (any(independentNeedsDummy) || any(controlNeedsDummy) && !any(independentDichotomous) && !any(controlDichotomous)) {
                         advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression</a> analysis
+                                        "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > 2 Outcomes - Binomial",
@@ -566,7 +566,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else if (any(independentCategorical) || any(controlCategorical)) {
                         advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression</a> analysis
+                                        "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > 2 Outcomes - Binomial",
@@ -575,7 +575,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else {
                         advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression</a> analysis
+                                        "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > 2 Outcomes - Binomial",
@@ -670,7 +670,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else if (any(independentNeedsDummy) || any(controlNeedsDummy) && !any(independentDichotomous) && !any(controlDichotomous)) {
                         advice <- paste(startAdvice,
-                                          "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression</a> analysis
+                                          "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
                                           seems to be a good option for you! In order to perform this analysis, go to:
                                           <br><br>
                                           Regression > Linear Regression",
@@ -679,7 +679,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                 }
                     else if (any(independentCategorical) || any(controlCategorical)) {
                         advice <- paste(startAdvice,
-                                    "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression</a> analysis
+                                    "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
                                      seems to be a good option for you! In order to perform this analysis, go to:
                                      <br><br>
                                      Regression > Linear Regression",
@@ -688,7 +688,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else {
                         advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression</a> analysis
+                                        "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
                                      seems to be a good option for you! In order to perform this analysis, go to:
                                      <br><br>
                                      Regression > Linear Regression",
