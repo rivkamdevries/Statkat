@@ -1,0 +1,11 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+
+^.*\.jmo$
+
+^temp$
+^build/js$
+^build/R$
+^jamovi$
+^\..*$
+^.*\.tar.gz
