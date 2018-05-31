@@ -1,12 +1,11 @@
 Package: Statkat
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Statistical Method Selector
 Version: 0.0.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Rivka M. de Vries
+Maintainer: Rivka M. de Vries <rivkamdevries@gmail.com>
+Description: This tool will help you to find an appropriate statistical method given your research question and the measurement level of your data.
+License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
 Imports: jmvcore (>= 0.5.5), R6
