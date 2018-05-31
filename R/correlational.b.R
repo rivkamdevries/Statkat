@@ -11,7 +11,24 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             namesControls <- self$options$controls
 
             if (is.null(nameDependent) || is.null(namesIndependents)) {
-                advice <- ""
+                advice <- "Welcome to Statkat!
+                          <br><br>
+                          You have selected the Correlational Research option. This is the place to be if you are interested in
+                          <ul>
+                          <li>the relationship between two or more variables, or
+                          <li>the difference between independent (unrelated) groups on a certain variable, or</li>
+                          <li>predicting one variable from other variables.</li>
+                          </ul>
+                          To get started, drop a 
+                          variable in the box below Variable 1 / Dependent Variable, and one or more variables in the box below Variable 2 / 
+                          Independent Variables. Our tool will then come up with a statistical method that may be appropriate for your data!
+                          <br><br>
+                          In addition, you can drop one or more variables in the box below Control Variables. Control variables
+                          are variables that you are not particularly interested in, but which may be related to the dependent variable and possibly 
+                          also to the independent variables. In experiments (with random assignment), control variables are often included to increase 
+                          power. In observational studies, control variables are often included mainly to equate subjects on the control variables. This
+                          prevents the control variables from confounding the relationships between the independent variables and the dependent variable.
+                "
                 html <- self$results$advice
                 return(html$setContent(advice))
             }

@@ -10,7 +10,13 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
 
             if (length(namesVariables) < 2) {
-                advice <- ""
+                advice <- "Welcome to Statkat!
+                          <br><br>
+                          You have selected the Repeated Measurements option. This is the place to be if you are 
+                          interested in differences between related variables. To get started, drop two or more related variables 
+                          in the white box below Related Variables. Our tool will then come up with a statistical method that may 
+                          be appropriate for your data!
+                "
                 html <- self$results$advice
                 return(html$setContent(advice))
             }

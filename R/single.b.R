@@ -7,7 +7,10 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
         .run = function() {
             nameVar <- self$options$var
             if (is.null(nameVar)) {
-                advice <- ""
+                advice <- "Welcome to Statkat!
+                          <br><br>
+                          To get started, drop a variable in the white box below Variable. Our tool will then come up with a statistical method that may be appropriate for your data! 
+                          "
                 html <- self$results$advice
                 return(html$setContent(advice))
             }
@@ -15,7 +18,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             var <- self$data[[nameVar]]
 
             if (length(na.omit(var)) == 0) {
-                advice <- "The entered variable should contain data"
+                advice <- "The entered variable should contain data."
                 html <- self$results$advice
                 return(html$setContent(advice))
             }
@@ -24,7 +27,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
             if (numberUniqueValues < 2) {
                 advice <- "The entered variable is constant. This means that all subjects have the same score on the variable.
-                                There needs to be variability in the scores on a variable in order to use it in statistical analyses."
+                           There needs to be variability in the scores on a variable in order to use it in statistical analyses."
                 html <- self$results$advice
                 return(html$setContent(advice))
             }
