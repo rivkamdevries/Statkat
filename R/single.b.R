@@ -5,9 +5,12 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
     inherit = singleBase,
     private = list(
         .run = function() {
-            nameVar <- self$options$var
+            nameVar <- self$options$variable
             if (is.null(nameVar)) {
                 advice <- "Welcome to Statkat!
+                          <br><br>
+                          This tool will help you to find an appropriate statistical method given the measurement level of your data.
+                          Make sure you have correctly defined the measurement levels of your variables on the Data tab.
                           <br><br>
                           To get started, drop a variable in the white box below Variable. Our tool will then come up with a statistical method that may be appropriate for your data! 
                           "

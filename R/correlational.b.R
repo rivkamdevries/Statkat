@@ -13,6 +13,9 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             if (is.null(nameDependent) || is.null(namesIndependents)) {
                 advice <- "Welcome to Statkat!
                           <br><br>
+                          This tool will help you to find an appropriate statistical method given the measurement level of your data.
+                          Make sure you have correctly defined the measurement levels of your variables on the Data tab.
+                          <br><br>
                           You have selected the Correlational Research option. This is the place to be if you are interested in
                           <ul>
                           <li>the relationship between two or more variables, or
@@ -21,7 +24,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                           </ul>
                           To get started, drop a 
                           variable in the box below Variable 1 / Dependent Variable, and one or more variables in the box below Variable 2 / 
-                          Independent Variables. Our tool will then come up with a statistical method that may be appropriate for your data!
+                          Independent Variables. Our tool will then come up with a statistical method that may be appropriate, given the measurement
+                          level of your entered variables! 
                           <br><br>
                           In addition, you can drop one or more variables in the box below Control Variables. Control variables
                           are variables that you are not particularly interested in, but which may be related to the dependent variable and possibly 
