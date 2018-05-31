@@ -64,9 +64,19 @@ singleBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 
 #' Single Variable
 #'
-#' 
-#' @param data .
-#' @param var .
+#' Statistical method selector for a single variable
+#'
+#' @examples
+#' exampleData <- data.frame(x1 = rnorm(20),
+#'                           x2 = as.factor(c(rep(1, 10), rep(2, 10))),
+#'                           x3 = as.ordered(rep(1, 10), rep(2, 5), rep(3, 5)))
+#'
+#' single(exampleData, variable = 'x1')
+#' single(exampleData, variable = 'x2')
+#' single(exampleData, variable = 'x3')
+#'
+#' @param data the data as a data frame
+#' @param var a string naming a variable from \code{data}
 #' @return A results object containing:
 #' \tabular{llllll}{
 #'   \code{results$advice} \tab \tab \tab \tab \tab a html \cr

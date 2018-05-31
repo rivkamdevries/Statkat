@@ -5,10 +5,34 @@ menuGroup: Statkat
 version: '1.0.0'
 jas: '1.1'
 
+description:
+    main: Statistical method selector for repeated measurements
+    R:
+        dontrun: false
+        usage: |
+            exampleData <- data.frame(x1 = rnorm(20),
+                                      x2 = rnorm(20),
+                                      x3 = rnorm(20),
+                                      x4 = as.factor(c(rep(1, 10), rep(2, 10))),
+                                      x5 = as.factor(rep(1, 5), rep(2, 5), rep(3, 10)),
+                                      x6 = as.ordered(rep(1, 5), rep(2, 5), rep(3, 10)),
+                                      x7 = as.ordered(rep(1, 10), rep(2, 5), rep(3, 5)))
+                                      
+            repeated(exampleData, variables = c('x1', 'x2', 'x3'))
+            repeated(exampleData, variables = c('x4', 'x5'))
+            repeated(exampleData, variables = c('x6', 'x7'))
+            
+            
+completeWhenFilled: true
+
 options:
     - name: data
       type: Data
+      description:
+          R: the data as a data frame
 
     - name: variables
       title: Related Variables
       type: Variables
+      description:
+          R: a vector of strings naming the related variables from `data`

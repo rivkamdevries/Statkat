@@ -73,16 +73,30 @@ correlationalBase <- if (requireNamespace('jmvcore')) R6::R6Class(
                 analysisId = analysisId,
                 revision = revision,
                 pause = NULL,
-                completeWhenFilled = FALSE)
+                completeWhenFilled = TRUE)
         }))
 
 #' Correlational Research
 #'
-#' 
-#' @param data .
-#' @param dep .
-#' @param independents .
-#' @param controls .
+#' Statistical method selector for correlational research
+#'
+#' @examples
+#' exampleData <- data.frame(x1 = rnorm(20),
+#'                           x2 = as.factor(c(rep(1, 10), rep(2, 10))),
+#'                           x3 = as.ordered(rep(1, 5), rep(2, 5), rep(3, 10)),
+#'                           x4 = rnorm(20),
+#'                           x5 = rnorm(20))
+#'
+#' correlational(exampleData, dep = 'x3', independents = 'x2')
+#' correlational(exampleData, dep = 'x1', independents = c('x2', 'x3'), controls = c('x4', 'x5'))
+#'
+#' @param data the data as a data frame
+#' @param dep a string naming variable 1 / the dependent variable from
+#'   \code{data}
+#' @param independents a string or vector of strings naming variable 2 / the
+#'   independent variables from \code{data}
+#' @param controls a string or vector of strings naming the control variables
+#'   from\code{ data}
 #' @return A results object containing:
 #' \tabular{llllll}{
 #'   \code{results$advice} \tab \tab \tab \tab \tab a html \cr

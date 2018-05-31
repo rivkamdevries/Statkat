@@ -5,10 +5,27 @@ menuGroup: Statkat
 version: '1.0.0'
 jas: '1.1'
 
+description:
+    main: Statistical method selector for a single variable
+    R:
+        dontrun: false
+        usage: |
+            exampleData <- data.frame(x1 = rnorm(20),
+                                      x2 = as.factor(c(rep(1, 10), rep(2, 10))),
+                                      x3 = as.ordered(rep(1, 10), rep(2, 5), rep(3, 5)))
+                                      
+            single(exampleData, variable = 'x1')
+            single(exampleData, variable = 'x2')
+            single(exampleData, variable = 'x3')
+
 options:
     - name: data
       type: Data
+      description:
+          R: the data as a data frame
 
     - name: var
       title: Variable
       type: Variable
+      description:
+          R: a string naming a variable from `data`

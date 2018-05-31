@@ -59,14 +59,29 @@ repeatedBase <- if (requireNamespace('jmvcore')) R6::R6Class(
                 analysisId = analysisId,
                 revision = revision,
                 pause = NULL,
-                completeWhenFilled = FALSE)
+                completeWhenFilled = TRUE)
         }))
 
 #' Repeated Measurements
 #'
-#' 
-#' @param data .
-#' @param variables .
+#' Statistical method selector for repeated measurements
+#'
+#' @examples
+#' exampleData <- data.frame(x1 = rnorm(20),
+#'                           x2 = rnorm(20),
+#'                           x3 = rnorm(20),
+#'                           x4 = as.factor(c(rep(1, 10), rep(2, 10))),
+#'                           x5 = as.factor(rep(1, 5), rep(2, 5), rep(3, 10)),
+#'                           x6 = as.ordered(rep(1, 5), rep(2, 5), rep(3, 10)),
+#'                           x7 = as.ordered(rep(1, 10), rep(2, 5), rep(3, 5)))
+#'
+#' repeated(exampleData, variables = c('x1', 'x2', 'x3'))
+#' repeated(exampleData, variables = c('x4', 'x5'))
+#' repeated(exampleData, variables = c('x6', 'x7'))
+#'
+#' @param data the data as a data frame
+#' @param variables a vector of strings naming the related variables from
+#'   \code{data}
 #' @return A results object containing:
 #' \tabular{llllll}{
 #'   \code{results$advice} \tab \tab \tab \tab \tab a html \cr

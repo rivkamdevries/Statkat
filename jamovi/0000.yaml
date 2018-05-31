@@ -17,15 +17,18 @@ analyses:
     ns: Statkat
     menuGroup: Statkat
     menuTitle: Single Variable
+    description: Statistical method selector for a single variable
   - title: Correlational Research
     name: correlational
     ns: Statkat
     menuGroup: Statkat
     menuTitle: Correlational Research
+    description: Statistical method selector for correlational research
   - title: Repeated Measurements
     name: repeated
     ns: Statkat
     menuGroup: Statkat
     menuTitle: Repeated Measurements
+    description: Statistical method selector for repeated measurements
 
 ...
