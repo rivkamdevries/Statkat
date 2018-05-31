@@ -95,7 +95,7 @@ correlationalBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' @param dep a string naming variable 1 / the dependent variable from
 #'   \code{data}
 #' @param independents a string or vector of strings naming variable 2 / the
-#'   independent variables from \code{data}
+#'   independent variable(s) from \code{data}
 #' @param controls a string or vector of strings naming the control
 #'   variable(s) from \code{data}
 #' @return A results object containing:

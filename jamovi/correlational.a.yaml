@@ -38,7 +38,7 @@ options:
       title: Variable 2 / Independent Variables
       type: Variables
       description:
-          R: a string or vector of strings naming variable 2 / the independent variables from `data`
+          R: a string or vector of strings naming variable 2 / the independent variable(s) from `data`
 
     - name: controls
       title: Control Variables
