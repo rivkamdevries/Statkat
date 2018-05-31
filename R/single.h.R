@@ -76,7 +76,9 @@ singleBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' single(exampleData, variable = 'x2')
 #' single(exampleData, variable = 'x3')
 #'
-#' @param data the data as a data frame
+#' @param data the data as a data frame, with variables encoded as numeric
+#'   (for interval/ratio variables), ordered (for ordinal variables), or factor
+#'   (for nominal variables)
 #' @param variable a string naming a variable from \code{data}
 #' @return A results object containing:
 #' \tabular{llllll}{

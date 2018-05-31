@@ -80,7 +80,9 @@ repeatedBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' repeated(exampleData, variables = c('x4', 'x5'))
 #' repeated(exampleData, variables = c('x6', 'x7'))
 #'
-#' @param data the data as a data frame
+#' @param data the data as a data frame, with variables encoded as numeric
+#'   (for interval/ratio variables), ordered (for ordinal variables), or factor
+#'   (for nominal variables)
 #' @param variables a vector of strings naming the related variables from
 #'   \code{data}
 #' @return A results object containing:

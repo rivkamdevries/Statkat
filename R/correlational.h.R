@@ -79,7 +79,7 @@ correlationalBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' Correlational Research
 #'
 #' Find an appropriate method given the measurement level of your data - 
-#' correlational research
+#' correlational research.
 #'
 #' @examples
 #' exampleData <- data.frame(x1 = rnorm(20),
@@ -91,7 +91,9 @@ correlationalBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' correlational(exampleData, dep = 'x3', independents = 'x2')
 #' correlational(exampleData, dep = 'x1', independents = c('x2', 'x3'), controls = c('x4', 'x5'))
 #'
-#' @param data the data as a data frame
+#' @param data the data as a data frame, with variables encoded as numeric
+#'   (for interval/ratio variables), ordered (for ordinal variables), or factor
+#'   (for nominal variables)
 #' @param dep a string naming variable 1 / the dependent variable from
 #'   \code{data}
 #' @param independents a string or vector of strings naming variable 2 / the

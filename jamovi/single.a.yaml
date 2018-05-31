@@ -22,7 +22,7 @@ options:
     - name: data
       type: Data
       description:
-          R: the data as a data frame
+          R: the data as a data frame, with variables encoded as numeric (for interval/ratio variables), ordered (for ordinal variables), or factor (for nominal variables)
 
     - name: variable
       title: Variable

@@ -27,7 +27,7 @@ analyses:
     menuTitle: Correlational Research
     description: >-
       Find an appropriate method given the measurement level of your data -
-      correlational research
+      correlational research.
   - title: Repeated Measurements
     name: repeated
     ns: Statkat

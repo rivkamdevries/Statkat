@@ -6,7 +6,7 @@ version: '1.0.0'
 jas: '1.1'
 
 description:
-    main: Find an appropriate method given the measurement level of your data - correlational research
+    main: Find an appropriate method given the measurement level of your data - correlational research.
     R:
         dontrun: false
         usage: |
@@ -26,7 +26,7 @@ options:
     - name: data
       type: Data
       description:
-          R: the data as a data frame
+          R: the data as a data frame, with variables encoded as numeric (for interval/ratio variables), ordered (for ordinal variables), or factor (for nominal variables)
 
     - name: dep
       title: Variable 1 / Dependent Variable
