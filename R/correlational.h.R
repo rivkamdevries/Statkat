@@ -78,7 +78,8 @@ correlationalBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 
 #' Correlational Research
 #'
-#' Statistical method selector for correlational research
+#' Find an appropriate method given the measurement level of your data - 
+#' correlational research
 #'
 #' @examples
 #' exampleData <- data.frame(x1 = rnorm(20),
@@ -95,8 +96,8 @@ correlationalBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #'   \code{data}
 #' @param independents a string or vector of strings naming variable 2 / the
 #'   independent variables from \code{data}
-#' @param controls a string or vector of strings naming the control variables
-#'   from\code{ data}
+#' @param controls a string or vector of strings naming the control
+#'   variable(s) from \code{data}
 #' @return A results object containing:
 #' \tabular{llllll}{
 #'   \code{results$advice} \tab \tab \tab \tab \tab a html \cr

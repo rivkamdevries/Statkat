@@ -6,7 +6,7 @@ version: '1.0.0'
 jas: '1.1'
 
 description:
-    main: Statistical method selector for correlational research
+    main: Find an appropriate method given the measurement level of your data - correlational research
     R:
         dontrun: false
         usage: |
@@ -44,5 +44,5 @@ options:
       title: Control Variables
       type: Variables
       description:
-          R: a string or vector of strings naming the control variables from` data`
+          R: a string or vector of strings naming the control variable(s) from `data`
 

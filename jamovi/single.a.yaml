@@ -6,7 +6,7 @@ version: '1.0.0'
 jas: '1.1'
 
 description:
-    main: Statistical method selector for a single variable
+    main: Find an appropriate method given the measurement level of your data - single variable
     R:
         dontrun: false
         usage: |
@@ -24,7 +24,7 @@ options:
       description:
           R: the data as a data frame
 
-    - name: var
+    - name: variable
       title: Variable
       type: Variable
       description:

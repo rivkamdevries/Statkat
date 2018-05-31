@@ -64,7 +64,8 @@ repeatedBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 
 #' Repeated Measurements
 #'
-#' Statistical method selector for repeated measurements
+#' Find an appropriate method given the measurement level of your data - 
+#' repeated measurements
 #'
 #' @examples
 #' exampleData <- data.frame(x1 = rnorm(20),

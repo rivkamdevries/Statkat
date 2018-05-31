@@ -6,7 +6,7 @@ version: '1.0.0'
 jas: '1.1'
 
 description:
-    main: Statistical method selector for repeated measurements
+    main: Find an appropriate method given the measurement level of your data - repeated measurements
     R:
         dontrun: false
         usage: |

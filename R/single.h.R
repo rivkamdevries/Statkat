@@ -6,7 +6,7 @@ singleOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
     inherit = jmvcore::Options,
     public = list(
         initialize = function(
-            var = NULL, ...) {
+            variable = NULL, ...) {
 
             super$initialize(
                 package='Statkat',
@@ -14,16 +14,16 @@ singleOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
                 requiresData=TRUE,
                 ...)
 
-            private$..var <- jmvcore::OptionVariable$new(
-                "var",
-                var)
+            private$..variable <- jmvcore::OptionVariable$new(
+                "variable",
+                variable)
 
-            self$.addOption(private$..var)
+            self$.addOption(private$..variable)
         }),
     active = list(
-        var = function() private$..var$value),
+        variable = function() private$..variable$value),
     private = list(
-        ..var = NA)
+        ..variable = NA)
 )
 
 singleResults <- if (requireNamespace('jmvcore')) R6::R6Class(
@@ -64,7 +64,8 @@ singleBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 
 #' Single Variable
 #'
-#' Statistical method selector for a single variable
+#' Find an appropriate method given the measurement level of your data - 
+#' single variable
 #'
 #' @examples
 #' exampleData <- data.frame(x1 = rnorm(20),
@@ -76,7 +77,7 @@ singleBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' single(exampleData, variable = 'x3')
 #'
 #' @param data the data as a data frame
-#' @param var a string naming a variable from \code{data}
+#' @param variable a string naming a variable from \code{data}
 #' @return A results object containing:
 #' \tabular{llllll}{
 #'   \code{results$advice} \tab \tab \tab \tab \tab a html \cr
@@ -85,13 +86,13 @@ singleBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' @export
 single <- function(
     data,
-    var) {
+    variable) {
 
     if ( ! requireNamespace('jmvcore'))
         stop('single requires jmvcore to be installed (restart may be required)')
 
     options <- singleOptions$new(
-        var = var)
+        variable = variable)
 
     results <- singleResults$new(
         options = options)

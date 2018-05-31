@@ -12,6 +12,6 @@ children:
         label: Variable
         children:
           - type: VariablesListBox
-            name: var
+            name: variable
             maxItemCount: 1
             isTarget: true
