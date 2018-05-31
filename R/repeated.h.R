@@ -36,7 +36,7 @@ repeatedResults <- if (requireNamespace('jmvcore')) R6::R6Class(
             super$initialize(
                 options=options,
                 name="",
-                title="Repeated measurements")
+                title="Repeated Measurements")
             self$add(jmvcore::Html$new(
                 options=options,
                 name="advice",
@@ -62,7 +62,7 @@ repeatedBase <- if (requireNamespace('jmvcore')) R6::R6Class(
                 completeWhenFilled = FALSE)
         }))
 
-#' Repeated measurements
+#' Repeated Measurements
 #'
 #' 
 #' @param data .

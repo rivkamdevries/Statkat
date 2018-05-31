@@ -36,7 +36,7 @@ singleResults <- if (requireNamespace('jmvcore')) R6::R6Class(
             super$initialize(
                 options=options,
                 name="",
-                title="Single variable")
+                title="Single Variable")
             self$add(jmvcore::Html$new(
                 options=options,
                 name="advice",
@@ -62,7 +62,7 @@ singleBase <- if (requireNamespace('jmvcore')) R6::R6Class(
                 completeWhenFilled = FALSE)
         }))
 
-#' Single variable
+#' Single Variable
 #'
 #' 
 #' @param data .

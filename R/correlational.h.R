@@ -50,7 +50,7 @@ correlationalResults <- if (requireNamespace('jmvcore')) R6::R6Class(
             super$initialize(
                 options=options,
                 name="",
-                title="Correlational research")
+                title="Correlational Research")
             self$add(jmvcore::Html$new(
                 options=options,
                 name="advice",
@@ -76,7 +76,7 @@ correlationalBase <- if (requireNamespace('jmvcore')) R6::R6Class(
                 completeWhenFilled = FALSE)
         }))
 
-#' Correlational research
+#' Correlational Research
 #'
 #' 
 #' @param data .

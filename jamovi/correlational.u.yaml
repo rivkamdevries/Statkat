@@ -1,4 +1,4 @@
-title: Correlational research
+title: Correlational Research
 name: correlational
 jus: '2.0'
 stage: 0
@@ -9,20 +9,20 @@ children:
     stretchFactor: 1
     children:
       - type: TargetLayoutBox
-        label: Variable 1 / dependent variable
+        label: Variable 1 / Dependent Variable
         children:
           - type: VariablesListBox
             name: dep
             maxItemCount: 1
             isTarget: true
       - type: TargetLayoutBox
-        label: Variable 2 / independent variables
+        label: Variable 2 / Independent Variables
         children:
           - type: VariablesListBox
             name: independents
             isTarget: true
       - type: TargetLayoutBox
-        label: Control variables
+        label: Control Variables
         children:
           - type: VariablesListBox
             name: controls

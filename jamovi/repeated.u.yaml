@@ -1,4 +1,4 @@
-title: Repeated measurements
+title: Repeated Measurements
 name: repeated
 jus: '2.0'
 stage: 0
@@ -9,7 +9,7 @@ children:
     stretchFactor: 1
     children:
       - type: TargetLayoutBox
-        label: Related variables
+        label: Related Variables
         children:
           - type: VariablesListBox
             name: variables

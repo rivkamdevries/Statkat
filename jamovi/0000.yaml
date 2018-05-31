@@ -12,20 +12,20 @@ description: >-
   More about what it does (maybe more than one line) Use four spaces when
   indenting paragraphs within the Description.
 analyses:
-  - title: Single variable
+  - title: Single Variable
     name: single
     ns: Statkat
     menuGroup: Statkat
-    menuTitle: Single variable
-  - title: Correlational research
+    menuTitle: Single Variable
+  - title: Correlational Research
     name: correlational
     ns: Statkat
     menuGroup: Statkat
-    menuTitle: Correlational research
-  - title: Repeated measurements
+    menuTitle: Correlational Research
+  - title: Repeated Measurements
     name: repeated
     ns: Statkat
     menuGroup: Statkat
-    menuTitle: Repeated measurements
+    menuTitle: Repeated Measurements
 
 ...

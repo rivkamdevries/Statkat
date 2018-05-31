@@ -1,6 +1,6 @@
 ---
 name:  repeated
-title: Repeated measurements
+title: Repeated Measurements
 menuGroup: Statkat
 version: '1.0.0'
 jas: '1.1'
@@ -10,5 +10,5 @@ options:
       type: Data
 
     - name: variables
-      title: Related variables
+      title: Related Variables
       type: Variables
