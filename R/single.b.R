@@ -39,7 +39,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                            <br><br>
                            Frequencies > 2 Outcomes - Binomial test
                            <ul>
-                            <li>Put your dichotomous variable in the white box at the right</li>
+                            <li>Drop your dichotomous variable in the white box at the right</li>
                             <li>Fill in the value for &pi;<sub>0</sub> in the box next to Test value</li>
                             <li>Under Hypothesis, select your alternative hypothesis</li>
                            </ul>"
@@ -51,7 +51,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                            <br><br>
                            T-Tests > One Sample T-Test
                              <ul>
-                                <li>Put your variable in the box below Dependent Variables</li>
+                                <li>Drop your variable in the box below Dependent Variables</li>
                                 <li>Under Tests, select Wilcoxon rank</li>
                                 <li>Under Hypothesis, fill in the value for $m_0$ in the box next to Test Value, and select your alternative hypothesis</li>
                             </ul>
@@ -64,7 +64,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                            <br><br>
                            Frequencies > N Outcomes - &Chi;<sup>2</sup> Goodness of fit
                            <ul>
-                              <li>Put your nominal variable in the box below Variable</li>
+                              <li>Drop your nominal variable in the box below Variable</li>
                               <li>Click on Expected Proportions and fill in the population proportions / probabilities according to your null hypothesis in the boxes below Ratio.
                                   If your null hypothesis states that they are all equal, you can leave the ratios equal to the default values (1)</li>
                            </ul>
@@ -77,7 +77,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 <br><br>
                 T-Tests > One Sample T-Test
                 <ul>
-                    <li>Put your variable in the box below Dependent Variables</li>
+                    <li>Drop your variable in the box below Dependent Variables</li>
                     <li>Under Hypothesis, fill in the value for &mu;<sub>0</sub> in the box next to Test Value, and select your alternative hypothesis</li>
                 </ul>
                 If the normality assumption is violated, you could use the non-parametric

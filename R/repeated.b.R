@@ -65,7 +65,7 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                  seems to be a good option for you! In order to perform this test, go to:
                                  Frequencies > Paired Samples - McNemar test
                                 <ul>
-                                <li>Put one of the two paired variables in the box below Rows and the other paired variable in the box below Columns</li>
+                                <li>Drop one of the two paired variables in the box below Rows and the other paired variable in the box below Columns</li>
                                 </ul>
                                 Click on the link to learn more about this test!"
                 }
@@ -78,7 +78,7 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                 <br><br>
                                 ANOVA > Repeated Measures ANOVA - Friedman
                                 <ul>
-                                <li>Put the two paired variables in the box below Measures</li>
+                                <li>Drop the two paired variables in the box below Measures</li>
                                 </ul>
                                 Click on the link to learn more about this test!"
                 }
@@ -96,7 +96,7 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                 <br><br>
                                T-Tests > Paired Samples T-Test
                                 <ul>
-                                <li>Put the two paired variables in the box below Paired Variables, one on the left side of the vertical
+                                <li>Drop the two paired variables in the box below Paired Variables, one on the left side of the vertical
                                     line and one on the right side of the vertical line</li>
                                 <li>Under Hypothesis, select your alternative hypothesis</li>
                                 </ul>
@@ -115,7 +115,7 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                 <br><br>
                                 ANOVA > Repeated Measures ANOVA - Friedman
                                 <ul>
-                                <li>Put the related variables in the box below Measures</li>
+                                <li>Drop the related variables in the box below Measures</li>
                                 </ul>
                                 Click on the link to learn more about this test!"
                 }
@@ -126,7 +126,7 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                 <br><br>
                                 ANOVA > Repeated Measures ANOVA - Friedman
                                 <ul>
-                                <li>Put the related variables in the box below Measures</li>
+                                <li>Drop the related variables in the box below Measures</li>
                                 </ul>
                                 Click on the link to learn more about this test!"
                 }

@@ -91,7 +91,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <br><br>
                                         T-Tests > Independent Samples T-Test
                                         <ul>
-                                            <li>Put your dependent variable in the box below Dependent Variables and your independent (grouping) variable in the box below Grouping Variable.
+                                            <li>Drop your dependent variable in the box below Dependent Variables and your independent (grouping) variable in the box below Grouping Variable.
                                                 Your grouping variable is the variable you have put in the box for Variable 2/independent variables - the variable that consists of only two groups</li>
                                             <li>Under Tests, select Mann-Whitney U</li>
                                             <li>Under Hypothesis, select your alternative hypothesis</li>
@@ -111,7 +111,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <br><br>
                                         Regression > Correlation Matrix
                                         <ul>
-                                        <li>Put your two variables in the white box at the right
+                                        <li>Drop your two variables in the white box at the right
                                         </li>
                                         <li>Under Correlation Coefficients, select Spearman</li>
                                         <li>Under Hypothesis, select your alternative hypothesis</li>
@@ -132,7 +132,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <br><br>
                                         Regression > Correlation Matrix
                                         <ul>
-                                        <li>Put your two variables in the white box at the right
+                                        <li>Drop your two variables in the white box at the right
                                         </li>
                                         <li>Under Correlation Coefficients, select Spearman</li>
                                         <li>Under Hypothesis, select your alternative hypothesis</li>
@@ -157,7 +157,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <br><br>
                                         T-Tests > Independent Samples T-Test
                                         <ul>
-                                        <li>Put your dependent variable in the box below Dependent Variables and your independent (grouping) variable in the box below Grouping Variable.
+                                        <li>Drop your dependent variable in the box below Dependent Variables and your independent (grouping) variable in the box below Grouping Variable.
                                         Your grouping variable is the variable you have put in the box for Variable 2/independent variables - the variable that consists of only two groups</li>
                                         <li>Under Tests, select Mann-Whitney U</li>
                                         <li>Under Hypothesis, select your alternative hypothesis</li>
@@ -187,7 +187,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <br><br>
                                         ANOVA > One Way ANOVA - Kruskal-Wallis
                                         <ul>
-                                        <li>Put your dependent variable in the box below Dependent Variables and your independent (the nominal, grouping) variable in the box below Grouping Variable</li>
+                                        <li>Drop your dependent variable in the box below Dependent Variables and your independent (the nominal, grouping) variable in the box below Grouping Variable</li>
                                         </ul>
                                         An alternative option would be the
                                         <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>.
@@ -258,7 +258,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     <br><br>
                                     T-Tests > Independent Samples T-Test
                                     <ul>
-                                    <li>Put your dependent (numeric) variable in the box below Dependent Variables and your independent (grouping) variable in the box below Grouping Variable</li>
+                                    <li>Drop your dependent (numeric) variable in the box below Dependent Variables and your independent (grouping) variable in the box below Grouping Variable</li>
                                     <li>Under Tests, select Student's if you want to assume equal population variances, and Welch's if you don't want to assume
                                         equal population variances</li>
                                     <li>Under Hypothesis, select your alternative hypothesis</li>
@@ -276,7 +276,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <br><br>
                                         Regression > Correlation Matrix
                                         <ul>
-                                        <li>Put your two variables in the white box at the right
+                                        <li>Drop your two variables in the white box at the right
                                         </li>
                                         <li>Under Correlation Coefficients, select Spearman</li>
                                         <li>Under Hypothesis, select your alternative hypothesis</li>
@@ -299,7 +299,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     <br><br>
                                     ANOVA > ANOVA
                                     <ul>
-                                    <li>Put your dependent (numeric) variable in the box below Dependent Variable and your independent (grouping) variable in the box below Fixed Factors</li>
+                                    <li>Drop your dependent (numeric) variable in the box below Dependent Variable and your independent (grouping) variable in the box below Fixed Factors</li>
                                     </ul>
                                     If the normality or homoscedasticity assumption is violated, you could use the non-parametric
                                     <a href= 'https://statkat.com/stattest.php?&t=17' target='_blank'>Kruskal-Wallis test</a>.
@@ -314,7 +314,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     <br><br>
                                     Regression > 2 Outcomes - Binomial
                                     <ul>
-                                    <li>Put your dependent (dichotomous) variable in the box below Dependent Variable and your independent (numeric) variable in the box below Covariates
+                                    <li>Drop your dependent (dichotomous) variable in the box below Dependent Variable and your independent (numeric) variable in the box below Covariates
                                     </li>
                                     </ul>
                                     If you would flip variable 1 and variable 2, you could also do a <a href= 'https://statkat.com/stattest.php?&t=10&t2=9' target='_blank'>two sample <i>t</i> test</a>
@@ -331,7 +331,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     <br><br>
                                     Regression > Correlation Matrix
                                     <ul>
-                                    <li>Put your two variables in the white box at the right
+                                    <li>Drop your two variables in the white box at the right
                                     </li>
                                     <li>Under Correlation Coefficients, select Spearman</li>
                                     <li>Under Hypothesis, select your alternative hypothesis</li>
@@ -356,7 +356,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     <br><br>
                                     Regression > N Outcomes - Multinomial
                                     <ul>
-                                    <li>Put your dependent (nominal) variable in the box below Dependent Variable and your independent (numeric) variable in the box below Covariates
+                                    <li>Drop your dependent (nominal) variable in the box below Dependent Variable and your independent (numeric) variable in the box below Covariates
                                     </li>
                                     </ul>
                                     If you would flip variable 1 and variable 2, you could also do a <a href= 'https://statkat.com/stattest.php?&t=11' target='_blank'>one way ANOVA</a>,
@@ -374,7 +374,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     <br><br>
                                     Regression > Correlation Matrix
                                     <ul>
-                                    <li>Put your two variables in the white box at the right
+                                    <li>Drop your two variables in the white box at the right
                                     </li>
                                     <li>Under Correlation Coefficients, select Pearson (selected by default)</li>
                                     <li>Under Hypothesis, select your alternative hypothesis</li>
@@ -398,16 +398,16 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 independentDichotomous <- sapply(namesIndependents, function(variable) { is.factor(self$data[[variable]]) && length(unique(na.omit(self$data[[variable]]))) == 2 })
 
                 stepsNoControlsCodeVars <- "<ul>
-                                            <li>Put your dependent variable in the box below Dependent Variable</li>
-                                            <li>Put your independent variables in the box below Covariates. Independent variables of nominal or ordinal measurement level that consist of more than two groups
+                                            <li>Drop your dependent variable in the box below Dependent Variable</li>
+                                            <li>Drop your independent variables in the box below Covariates. Independent variables of nominal or ordinal measurement level that consist of more than two groups
                                             should be transformed into code variables before they are included in the analysis. In Jamovi, instead of transforming your categorical
                                             independent variables into code variables yourself, you can also put the untransformed categorical independent variables in the
                                             box below Factors. Jamovi will then make the code variables for you 'behind the scenes'</li>
                                             </ul>"
 
                 stepsNoControlsCategorical <- "<ul>
-                                                <li>Put your dependent variable in the box below Dependent Variable</li>
-                                                <li>Put your independent variables in the box below Covariates. Independent variables of nominal or ordinal measurement level that consist of more than two groups
+                                                <li>Drop your dependent variable in the box below Dependent Variable</li>
+                                                <li>Drop your independent variables in the box below Covariates. Independent variables of nominal or ordinal measurement level that consist of more than two groups
                                                 should be transformed into code variables before they are included in the analysis. Independent variables of nominal or ordinal measurement
                                                 level that consist of two groups can be transformed into code variables, but they don't need to be. In Jamovi, instead of transforming your categorical
                                                 independent variables into code variables yourself, you can also put the untransformed categorical independent variables in the
@@ -415,8 +415,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                                </ul>"
 
                 stepsNoControlsAllNumeric <- "<ul>
-                                                <li>Put your dependent variable in the box below Dependent Variable</li>
-                                                <li>Put your independent variables in the box below Covariates</li>
+                                                <li>Drop your dependent variable in the box below Dependent Variable</li>
+                                                <li>Drop your independent variables in the box below Covariates</li>
                                               </ul>"
 
                 if (is.factor(dependent) && numberUniqueValuesDependent == 2) {
@@ -489,7 +489,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                             <br><br>
                                             ANOVA > ANOVA
                                             <ul>
-                                            <li>Put your numeric dependent variable in the box below Dependent Variable and your two independent (grouping) variables
+                                            <li>Drop your numeric dependent variable in the box below Dependent Variable and your two independent (grouping) variables
                                                 in the box below Fixed Factors</li>
                                             </ul>
                                             Click on the link to learn more about this method!")
@@ -501,7 +501,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                             <br><br>
                                             ANOVA > ANOVA
                                             <ul>
-                                            <li>Put your numeric dependent variable in the box below Dependent Variable and your independent (grouping) variables
+                                            <li>Drop your numeric dependent variable in the box below Dependent Variable and your independent (grouping) variables
                                             in the box below Fixed Factors</li>
                                             </ul>")
                         }
@@ -550,16 +550,16 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 controlDichotomous <- sapply(namesControls, function(variable) { is.factor(self$data[[variable]]) && length(unique(na.omit(self$data[[variable]]))) == 2 })
 
                 stepsWithControlsCodeVars <- "<ul>
-                                                <li>Put your dependent variable in the box below Dependent Variable</li>
-                                                <li>Put your independent variables and control variables in the box below Covariates. Independent/control variables of nominal or ordinal measurement level that consist of more than two groups
+                                                <li>Drop your dependent variable in the box below Dependent Variable</li>
+                                                <li>Drop your independent variables and control variables in the box below Covariates. Independent/control variables of nominal or ordinal measurement level that consist of more than two groups
                                                 should be transformed into code variables before they are included in the analysis. In Jamovi, instead of transforming your categorical
                                                 independent/control variables into code variables yourself, you can also put the untransformed categorical variables in the
                                                 box below Factors. Jamovi will then make the code variables for you 'behind the scenes'</li>
                                               </ul>"
 
                 stepsWithControlsCategorical <- "<ul>
-                                                    <li>Put your dependent variable in the box below Dependent Variable</li>
-                                                    <li>Put your independent variables and control variables in the box below Covariates. Independent/control variables of nominal or ordinal measurement level that consist of more than two groups
+                                                    <li>Drop your dependent variable in the box below Dependent Variable</li>
+                                                    <li>Drop your independent variables and control variables in the box below Covariates. Independent/control variables of nominal or ordinal measurement level that consist of more than two groups
                                                     should be transformed into code variables before they are included in the analysis. Independent/control variables of nominal or ordinal measurement
                                                     level that consist of two groups can be transformed into code variables, but they don't need to be. In Jamovi, instead of transforming your categorical
                                                     independent/control variables into code variables yourself, you can also put the untransformed categorical variables in the
@@ -567,8 +567,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                                  </ul>"
 
                 stepsWithControlsAllNumeric <- "<ul>
-                                                    <li>Put your dependent variable in the box below Dependent Variable</li>
-                                                    <li>Put your independent variables and control variables in the box below Covariates</li>
+                                                    <li>Drop your dependent variable in the box below Dependent Variable</li>
+                                                    <li>Drop your independent variables and control variables in the box below Covariates</li>
                                                  </ul>"
 
                 if (is.factor(dependent) && numberUniqueValuesDependent == 2) {
@@ -643,7 +643,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                             <br><br>
                                             ANOVA > ANOVA
                                             <ul>
-                                            <li>Put your numeric dependent variable in the box below Dependent Variable and your nominal/ordinal independent and control
+                                            <li>Drop your numeric dependent variable in the box below Dependent Variable and your nominal/ordinal independent and control
                                             variables in the box below Fixed Factors</li>
                                             </ul>
                                             Click on the link to learn more about this method!")
@@ -655,7 +655,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                             <br><br>
                                             ANOVA > ANOVA
                                             <ul>
-                                            <li>Put your numeric dependent variable in the box below Dependent Variable and your nominal/ordinal independent and control
+                                            <li>Drop your numeric dependent variable in the box below Dependent Variable and your nominal/ordinal independent and control
                                             variables in the box below Fixed Factors</li>
                                             </ul>")
                         }
@@ -668,9 +668,9 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <br><br>
                                         ANOVA > ANCOVA
                                         <ul>
-                                        <li>Put your numeric dependent variable in the box below Dependent Variable</li>
-                                        <li>Put your nominal/ordinal independent variables in the box below Fixed Factors</li>
-                                        <li>Put your numeric control variables in the box below Covariates</li>
+                                        <li>Drop your numeric dependent variable in the box below Dependent Variable</li>
+                                        <li>Drop your nominal/ordinal independent variables in the box below Fixed Factors</li>
+                                        <li>Drop your numeric control variables in the box below Covariates</li>
                                         </ul>")
                     }
                     else if (all(independentCategorical)) {
@@ -680,9 +680,9 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <br><br>
                                         ANOVA > ANCOVA
                                         <ul>
-                                        <li>Put your numeric dependent variable in the box below Dependent Variable</li>
-                                        <li>Put your nominal/ordinal independent and control variables in the box below Fixed Factors</li>
-                                        <li>Put your numeric control variables in the box below Covariates</li>
+                                        <li>Drop your numeric dependent variable in the box below Dependent Variable</li>
+                                        <li>Drop your nominal/ordinal independent and control variables in the box below Fixed Factors</li>
+                                        <li>Drop your numeric control variables in the box below Covariates</li>
                                         </ul>")
                     }
                     else if (any(independentNeedsDummy) || any(controlNeedsDummy) && !any(independentDichotomous) && !any(controlDichotomous)) {
