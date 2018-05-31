@@ -7,7 +7,9 @@
 correlational(data, dep, independents, controls)
 }
 \arguments{
-\item{data}{the data as a data frame}
+\item{data}{the data as a data frame, with variables encoded as numeric
+(for interval/ratio variables), ordered (for ordinal variables), or factor
+(for nominal variables)}
 
 \item{dep}{a string naming variable 1 / the dependent variable from
 \code{data}}
@@ -26,7 +28,7 @@ A results object containing:
 }
 \description{
 Find an appropriate method given the measurement level of your data - 
-correlational research
+correlational research.
 }
 \examples{
 exampleData <- data.frame(x1 = rnorm(20),

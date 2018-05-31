@@ -7,7 +7,9 @@
 single(data, variable)
 }
 \arguments{
-\item{data}{the data as a data frame}
+\item{data}{the data as a data frame, with variables encoded as numeric
+(for interval/ratio variables), ordered (for ordinal variables), or factor
+(for nominal variables)}
 
 \item{variable}{a string naming a variable from \code{data}}
 }

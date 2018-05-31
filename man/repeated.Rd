@@ -7,7 +7,9 @@
 repeated(data, variables)
 }
 \arguments{
-\item{data}{the data as a data frame}
+\item{data}{the data as a data frame, with variables encoded as numeric
+(for interval/ratio variables), ordered (for ordinal variables), or factor
+(for nominal variables)}
 
 \item{variables}{a vector of strings naming the related variables from
 \code{data}}
