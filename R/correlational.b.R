@@ -24,8 +24,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                           </ul>
                           To get started, drop a 
                           variable in the box below Variable 1 / Dependent Variable, and one or more variables in the box below Variable 2 / 
-                          Independent Variables. Our tool will then come up with a statistical method that may be appropriate, given the measurement
-                          level of your entered variables! 
+                          Independent Variables. Our tool will then come up with a statistical method that may be appropriate for your data! 
                           <br><br>
                           In addition, you can drop one or more variables in the box below Control Variables. Control variables
                           are variables that you are not particularly interested in, but which may be related to the dependent variable and possibly 
