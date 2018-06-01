@@ -29,7 +29,8 @@ singleOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
 singleResults <- if (requireNamespace('jmvcore')) R6::R6Class(
     inherit = jmvcore::Group,
     active = list(
-        advice = function() private$.items[["advice"]]),
+        advice = function() private$.items[["advice"]],
+        plot = function() private$.items[["plot"]]),
     private = list(),
     public=list(
         initialize=function(options) {
@@ -41,7 +42,14 @@ singleResults <- if (requireNamespace('jmvcore')) R6::R6Class(
                 options=options,
                 name="advice",
                 title="Advice",
-                visible="(text)"))}))
+                visible="(text)"))
+            self$add(jmvcore::Image$new(
+                options=options,
+                name="plot",
+                title="Scatter plot",
+                width=400,
+                height=300,
+                renderFun=".plot"))}))
 
 singleBase <- if (requireNamespace('jmvcore')) R6::R6Class(
     "singleBase",
@@ -83,6 +91,7 @@ singleBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' @return A results object containing:
 #' \tabular{llllll}{
 #'   \code{results$advice} \tab \tab \tab \tab \tab a html \cr
+#'   \code{results$plot} \tab \tab \tab \tab \tab an image \cr
 #' }
 #'
 #' @export

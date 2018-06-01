@@ -8,5 +8,5 @@ Description: This tool will help you to find an appropriate statistical method g
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
-Imports: jmvcore (>= 0.5.5), R6
+Imports: jmvcore (>= 0.5.5), R6, ggplot2 (>= 2.2.1)
 RoxygenNote: 6.0.1

@@ -8,5 +8,11 @@ items:
       title: Advice
       type: Html
       visible: (text)
-
+      
+    - name: plot
+      title: Scatter plot
+      type: Image
+      width:  400
+      height: 300
+      renderFun: .plot
 ...

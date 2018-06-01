@@ -91,9 +91,42 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             else {
                 stop("Unknown data type")
             }
-
+            
             html <- self$results$advice
             html$setContent(advice)
+            
+          
+            
+            N <- length(var)
+            plotData <- data.frame(x = rnorm(N, 0, .02), y = var)
+            
+            image <- self$results$plot
+            image$setState(plotData)
+        },
+        .plot = function(image, ...) {
+          if (is.null(self$options$variable)) {
+            return (FALSE)
+          }
+          
+          plotData <- image$state
+          
+          if (length(plotData[['x']]) == 0) {
+            return (FALSE)
+          }
+          
+          plot <- ggplot(plotData, aes(x = x, y = y)) + 
+            geom_point() + 
+            xlim(-1, 1) + 
+            theme(axis.title.x = element_blank(),
+                  axis.text.x = element_blank(),
+                  axis.ticks.x = element_blank()) + 
+            theme(panel.grid.major = element_blank(), 
+                  panel.grid.minor = element_blank(),
+                  panel.background = element_blank(), 
+                  axis.line = element_line(colour = "black")) +
+            xlab("") + ylab(self$options$variable)
 
+          print(plot)
+          TRUE
         })
 )
