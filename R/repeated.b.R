@@ -63,7 +63,7 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
             if (length(namesVariables) == 2) {
                 if ((measurementLevel[1] == "nominal" || measurementLevel[1] == "ordinal") && numberUniqueValues == 2) {
-                    advice <- "Given the measurement level of your entered variables,
+                    advice <- "You have entered two related dichotomous variables. Hence , 
                                <a href= 'https://statkat.com/stattest.php?&t=39' target='_blank'>McNemar's test</a>
                                  seems to be a good option for you! In order to perform this test, go to:
                                  Frequencies > Paired Samples - McNemar test
@@ -73,7 +73,7 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                 Click on the link to learn more about this test!"
                 }
                 else if (measurementLevel[1] == "ordinal") {
-                    advice <- "Given the measurement level of your entered variables, the
+                    advice <- "You have entered two related ordinal variables. Hence,  the
                                <a href= 'https://statkat.com/stattest.php?&t=39' target='_blank'>sign test</a>
                                  seems to be a good option for you! Jamovi does not have a specific option for the sign test.
                                 However, you can do the <a href= 'https://statkat.com/stattest.php?&t=33' target='_blank'>Friedman test</a> instead. The <i>p</i> value resulting from this Friedman test
@@ -86,14 +86,14 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                 Click on the link to learn more about this test!"
                 }
                 else if (measurementLevel[1] == "nominal") {
-                    advice <- "Given the measurement level of your entered variables, the
+                    advice <- "You have entered two related nominal variables. Hence, the
                                <a href= 'https://statkat.com/stattest.php?&t=41' target='_blank'>marginal homogeneity test</a>
                                  seems to be a good option for you! The marginal homogeneity test is currently not available in Jamovi.
                                 You could use other software to perform the analysis (e.g., R or SPSS).
                                 Click on the link to learn more about this test!"
                 }
                 else if (measurementLevel[1] == "numeric") {
-                    advice <- "Given the measurement level of your entered variables, the
+                    advice <- "You have entered two related numeric variables. Hence, the
                                <a href= 'https://statkat.com/stattest.php?&t=7' target='_blank'>paired sample <i>t</i> test</a>
                                  seems to be a good option for you! In order to perform this test, go to:
                                 <br><br>
@@ -110,7 +110,7 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             }
             else {
                 if ((measurementLevel[1] == "nominal" || measurementLevel[1] == "ordinal") && numberUniqueValues == 2) {
-                    advice <- "Given the measurement level of your entered variables,
+                    advice <- "You have entered several related dichotomous variables. Hence, 
                                <a href= 'https://statkat.com/stattest.php?&t=40' target='_blank'>Cochran's <i>Q</i> test</a>
                                  seems to be a good option for you! Jamovi does not have a specific option for Cochran's <i>Q</i> test.
                                 However, you can do the <a href= 'https://statkat.com/stattest.php?&t=33' target='_blank'>Friedman test</a> instead. The <i>p</i> value resulting from this Friedman test
@@ -123,7 +123,7 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                 Click on the link to learn more about this test!"
                 }
                 else if (measurementLevel[1] == "ordinal") {
-                    advice <- "Given the measurement level of your entered variables, the
+                    advice <- "You have entered several related ordinal variables. Hence, the
                                <a href= 'https://statkat.com/stattest.php?&t=33' target='_blank'>Friedman test</a>
                                 seems to be a good option for you! In order to perform this test, go to:
                                 <br><br>
@@ -134,12 +134,12 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                 Click on the link to learn more about this test!"
                 }
                 else if (measurementLevel[1] == "nominal") {
-                    advice <- "Given the measurement level of your entered variables, the Madansky test of interchangeability
+                    advice <- "You have entered several related nominal variables. Hence, the Madansky test of interchangeability
                                 seems to be a good option for you! The Madansky test of interchangeability is currently not available in Jamovi.
                                 You could use other software to perform the analysis (e.g., R)."
                 }
                 else if (measurementLevel[1] == "numeric") {
-                    advice <- "Given the measurement level of your entered variables, a repeated measures ANOVA
+                    advice <- "You have entered several related numeric variables. Hence, a repeated measures ANOVA
                                 seems to be a good option for you! In order to perform this test, go to:
                                 <br><br>
                                 ANOVA > Repeated Measures ANOVA

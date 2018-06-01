@@ -64,15 +64,14 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             oneIndependent <- length(namesIndependents) == 1 && is.null(namesControls)
             severalIndependents <- length(namesIndependents) > 1 && is.null(namesControls)
 
-            startAdvice <- "Given the measurement level of your entered variables, "
-
             if (oneIndependent) {
                 independent <- self$data[[namesIndependents]]
                 numberUniqueValuesIndependent <- length(unique(na.omit(independent)))
 
                 if (is.factor(dependent) && is.factor(independent) && numberUniqueValuesDependent == 2 && numberUniqueValuesIndependent == 2) {
-                    advice <- paste(startAdvice,
-                                "the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
+                    advice <- "You have entered a dichotomous variable for Variable 1 / Dependent Variable and a dichotomous variable for 
+                                Variable 2 / Independent Variables. Hence,
+                                the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
                                  seems to be a good option for you! In order to perform this test, go to:
                                  <br><br>
                                  Frequencies > Independent Samples - &chi;<sup>2</sup> test of association
@@ -82,13 +81,13 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                  Click on the link to learn more about this test!<br><br>
                                  Note: since your categorical variables each consist of only two groups, the <i>p</i> value resulting from the
                                  chi-squared test is equivalent to the (two sided) <i>p</i> value that would have resulted form the <i>z</i> test
-                                 for the difference between two proportions.")
+                                 for the difference between two proportions."
                 }
 
                 else if (is.ordered(dependent) && is.ordered(independent)) {
                     if (numberUniqueValuesDependent > 2 && numberUniqueValuesIndependent == 2) {
-                        advice <- paste(startAdvice,
-                                        "the <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>
+                        advice <- "You have entered an ordinal variable for Variable 1 / Dependent Variable and a dichotomous variable for 
+                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>
                                         for the difference between two groups on an ordinal variable
                                         seems to be a good option for you! In order to perform this test, go to:
                                         <br><br>
@@ -104,11 +103,11 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>.
                                         Note that the chi-squared test treats both variables as nominal, and therefore does not take the ranked nature of the ordinal variables
                                         into account.<br><br>
-                                        Click on the links to learn more about these methods!")
+                                        Click on the links to learn more about these methods!"
                     }
                     else if (numberUniqueValuesDependent == 2 && numberUniqueValuesIndependent > 2) {
-                        advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Spearman's rank correlation coefficient</a>,
+                        advice <- "You have entered a dichotomous variable for Variable 1 / Dependent Variable and an ordinal variable for 
+                                    Variable 2 / Independent Variables. Hence, <a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Spearman's rank correlation coefficient</a>,
                                         which is a measure for the strength of the monotonic relationship between two variables,
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
@@ -125,11 +124,12 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         into account.<br><br>
                                         If you would flip variable 1 and variable 2, you could also use the <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>
                                         for the difference between two groups on an ordinal variable.<br><br>
-                                        Click on the links to learn more about these methods!")
+                                        Click on the links to learn more about these methods!"
                     }
                     else {
-                        advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Spearman's rank correlation coefficient</a>,
+                        advice <- "You have entered an ordinal variable for Variable 1 / Dependent Variable and an ordinal variable for 
+                                    Variable 2 / Independent Variables. Hence,
+                                        <a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Spearman's rank correlation coefficient</a>,
                                         which is a measure for the strength of the monotonic relationship between two variables,
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
@@ -147,14 +147,15 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         Note, however, that the chi-squared test treats both variables as nominal, and therefore does not take the ranked nature of the ordinal variables
                                         into account. The Kruskal-Wallis test treats the dependent variable as ordinal but the independent (grouping) variable
                                         as nominal.<br><br>
-                                        Click on the links to learn more about these methods!")
+                                        Click on the links to learn more about these methods!"
                     }
                 }
 
                 else if (is.ordered(dependent) && is.factor(independent)) {
                     if (numberUniqueValuesDependent > 2 && numberUniqueValuesIndependent == 2) {
-                        advice <- paste(startAdvice,
-                                        "the <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>
+                        advice <- "You have entered an ordinal variable for Variable 1 / Dependent Variable and a dichotomous variable for 
+                                    Variable 2 / Independent Variables. Hence,
+                                        the <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>
                                         for the difference between two groups on an ordinal variable
                                         seems to be a good option for you! In order to perform this test, go to:
                                         <br><br>
@@ -169,22 +170,22 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>.
                                         Note, however, that the chi-squared test treats both variables as nominal, and therefore does not take the ranked nature of the ordinal variable
                                         into account.<br><br>
-                                        Click on the links to learn more about these tests!")
+                                        Click on the links to learn more about these tests!"
                     }
                     else if (numberUniqueValuesDependent == 2 && numberUniqueValuesIndependent > 2) {
-                        advice <- paste(startAdvice,
-                                        "the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
+                        advice <- "You have entered a dichotomous variable for Variable 1 / Dependent Variable and a nominal variable for 
+                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
                                         seems to be a good option for you! In order to perform this test, go to:
                                         <br><br>
                                         Frequencies > Independent Samples - &chi;<sup>2</sup> test of association
                                         <ul>
                                         <li>Put one of your two categorical variables in the box below Rows, and the other categorical variable in the box below Columns</li>
                                         </ul>
-                                        Click on the link to learn more about this test!")
+                                        Click on the link to learn more about this test!"
                     }
                     else {
-                        advice <- paste(startAdvice,
-                                        "the <a href= 'https://statkat.com/stattest.php?&t=17' target='_blank'>Kruskal-Wallis test</a>
+                        advice <- "You have entered an ordinal variable for Variable 1 / Dependent Variable and a nominal variable for 
+                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=17' target='_blank'>Kruskal-Wallis test</a>
                                         for the difference between several groups on an ordinal variable
                                         seems to be a good option for you! In order to perform this test, go to:
                                         <br><br>
@@ -196,25 +197,25 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>.
                                         Note, however, that the chi-squared test treats both variables as nominal, and therefore does not take the ranked nature of the ordinal variable
                                         into account.<br><br>
-                                        Click on the links to learn more about these tests!")
+                                        Click on the links to learn more about these tests!"
                     }
                 }
 
                 else if (is.factor(dependent) && is.ordered(independent)) {
                     if (numberUniqueValuesDependent > 2 && numberUniqueValuesIndependent == 2) {
-                        advice <- paste(startAdvice,
-                                        "the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
+                        advice <- "You have entered a nominal variable for Variable 1 / Dependent Variable and a dichotomous variable for 
+                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
                                         seems to be a good option for you! In order to perform this test, go to:
                                         <br><br>
                                         Frequencies > Independent Samples - &chi;<sup>2</sup> test of association
                                         <ul>
                                         <li>Put one of your two categorical variables in the box below Rows, and the other categorical variable in the box below Columns</li>
                                         </ul>
-                                        Click on the link to learn more about this test!")
+                                        Click on the link to learn more about this test!"
                     }
                     else if (numberUniqueValuesDependent == 2 && numberUniqueValuesIndependent > 2) {
-                        advice <- paste(startAdvice,
-                                        "the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
+                        advice <- "You have entered a dichotomous variable for Variable 1 / Dependent Variable and an ordinal variable for 
+                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
                                         seems to be a good option for you! In order to perform this test, go to:
                                         <br><br>
                                         Frequencies > Independent Samples - &chi;<sup>2</sup> test of association
@@ -223,11 +224,11 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         </ul>
                                         If you would flip variable 1 and variable 2, you could also use the <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>
                                         for the difference between two groups on an ordinal variable.<br><br>
-                                        Click on the links to learn more about these tests!")
+                                        Click on the links to learn more about these tests!"
                     }
                     else {
-                        advice <- paste(startAdvice,
-                                        "the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
+                        advice <- "You have entered a nominal variable for Variable 1 / Dependent Variable and an ordinal variable for 
+                                    Variable 2 / Independent Variables. Hence,the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
                                         seems to be a good option for you! In order to perform this test, go to:
                                         <br><br>
                                         Frequencies > Independent Samples - &chi;<sup>2</sup> test of association
@@ -236,25 +237,26 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         </ul>
                                         If you would flip variable 1 and variable 2, you could also use the <a href= 'https://statkat.com/stattest.php?&t=17' target='_blank'>Kruskal-Wallis test</a>
                                         for the difference between several groups on an ordinal variable.<br><br>
-                                        Click on the links to learn more about these tests!")
+                                        Click on the links to learn more about these tests!"
                     }
                 }
 
                 else if (is.factor(dependent) && is.factor(independent)) {
-                    advice <- paste(startAdvice,
-                                        "the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
+                    advice <- "You have entered a nominal variable for Variable 1 / Dependent Variable and a nominal variable for 
+                                    Variable 2 / Independent Variables. Both variables consist of two or more groups. 
+                                    Hence, the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
                                         seems to be a good option for you! In order to perform this test, go to:
                                         <br><br>
                                         Frequencies > Independent Samples - &chi;<sup>2</sup> test of association
                                         <ul>
                                         <li>Put one of your two categorical variables in the box below Rows, and the other categorical variable in the box below Columns</li>
                                         </ul>
-                                        Click on the link to learn more about this test!")
+                                        Click on the link to learn more about this test!"
                 }
 
                 else if (is.numeric(dependent) && is.factor(independent) && numberUniqueValuesIndependent == 2) {
-                    advice <- paste(startAdvice,
-                                    "the <a href= 'https://statkat.com/stattest.php?&t=10' target='_blank'>two sample <i>t</i> test assuming equal population variances</a>
+                    advice <- "You have entered a numeric variable for Variable 1 / Dependent Variable and a dichotomous variable for 
+                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=10' target='_blank'>two sample <i>t</i> test assuming equal population variances</a>
                                     or the <a href= 'https://statkat.com/stattest.php?&t=9' target='_blank'>two sample <i>t</i> test not assuming equal population variances</a>
                                     seems to be a good option for you! Both tests are tests for the difference between two population means.
                                     In order to perform these tests, go to:
@@ -268,12 +270,12 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     </ul>
                                     If the normality assumption is violated, you could use the non-parametric
                                     <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>.
-                                    Click on the links to learn more about these tests!")
+                                    Click on the links to learn more about these tests!"
                 }
 
                 else if (is.numeric(dependent) && is.ordered(independent)) {
-                    advice <- paste(startAdvice,
-                                    "<a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Spearman's rank correlation coefficient</a>,
+                    advice <- "You have entered a numeric variable for Variable 1 / Dependent Variable and an ordinal variable for 
+                                    Variable 2 / Independent Variables. Hence, <a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Spearman's rank correlation coefficient</a>,
                                         which is a measure for the strength of the monotonic relationship between two variables,
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
@@ -291,12 +293,12 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         independent variable into account. That is, it will treat the ordinal independent variable as a nominal variable.
                                         On the other hand, the disadvantage of Spearman's rho is that it treats the numeric variable as an ordinal variable, rather than an interval/ratio variable.
                                         <br><br>
-                                        Click on the links to learn more about these methods!")
+                                        Click on the links to learn more about these methods!"
                 }
 
                 else if (is.numeric(dependent) && is.factor(independent)) {
-                    advice <- paste(startAdvice,
-                                    "a <a href= 'https://statkat.com/stattest.php?&t=11' target='_blank'>one way ANOVA</a>, which is
+                    advice <- "You have entered a numeric variable for Variable 1 / Dependent Variable and a nominal variable for 
+                                    Variable 2 / Independent Variables. Hence, a <a href= 'https://statkat.com/stattest.php?&t=11' target='_blank'>one way ANOVA</a>, which is
                                         is a test for the difference between several population means,
                                     seems to be a good option for you! In order to perform this test, go to:
                                     <br><br>
@@ -307,12 +309,12 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     If the normality or homoscedasticity assumption is violated, you could use the non-parametric
                                     <a href= 'https://statkat.com/stattest.php?&t=17' target='_blank'>Kruskal-Wallis test</a>.
                                     <br><br>
-                                    Click on the links to learn more about these tests!")
+                                    Click on the links to learn more about these tests!"
                 }
 
                 else if (is.factor(dependent) && is.numeric(independent) && numberUniqueValuesDependent == 2) {
-                    advice <- paste(startAdvice,
-                                    "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
+                    advice <- "You have entered a dichotomous variable for Variable 1 / Dependent Variable and a numeric variable for 
+                                    Variable 2 / Independent Variables. Hence, <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                     seems to be a good option for you! In order to perform this analysis, go to:
                                     <br><br>
                                     Regression > 2 Outcomes - Binomial
@@ -323,12 +325,12 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     If you would flip variable 1 and variable 2, you could also do a <a href= 'https://statkat.com/stattest.php?&t=10&t2=9' target='_blank'>two sample <i>t</i> test</a>
                                     for the difference between two population means, or the non-parametric <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>.
                                     <br><br>
-                                    Click on the links to learn more about these methods!")
+                                    Click on the links to learn more about these methods!"
                 }
 
                 else if (is.ordered(dependent) && is.numeric(independent)) {
-                    advice <- paste(startAdvice,
-                                    "<a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Spearman's rank correlation coefficient</a>,
+                    advice <- "You have entered an ordinal variable for Variable 1 / Dependent Variable and a numeric variable for 
+                                    Variable 2 / Independent Variables. Hence, <a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Spearman's rank correlation coefficient</a>,
                                     which is a measure for the strength of the monotonic relationship between two variables,
                                     seems to be a good option for you! In order to perform this analysis, go to:
                                     <br><br>
@@ -350,12 +352,12 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     variable and your ordinal variable would be the independent variable (grouping factor). The disadvantage of the one way ANOVA is that it will not take the ranked nature of the ordinal
                                     independent variable into account. That is, it will treat the ordinal independent variable as a nominal variable.
                                     <br><br>
-                                    Click on the links to learn more about these methods!")
+                                    Click on the links to learn more about these methods!"
                 }
 
                 else if (is.factor(dependent) && is.numeric(independent)) {
-                    advice <-  paste(startAdvice,
-                                    "multinomial logistic regression seems to be a good option for you! In order to perform this analysis, go to:
+                    advice <-  "You have entered a nominal variable for Variable 1 / Dependent Variable and a numeric variable for 
+                                    Variable 2 / Independent Variables. Hence, multinomial logistic regression seems to be a good option for you! In order to perform this analysis, go to:
                                     <br><br>
                                     Regression > N Outcomes - Multinomial
                                     <ul>
@@ -365,13 +367,13 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     If you would flip variable 1 and variable 2, you could also do a <a href= 'https://statkat.com/stattest.php?&t=11' target='_blank'>one way ANOVA</a>,
                                     which is a test for the difference between several population means. Your numeric variable would be the dependent
                                     variable and your nominal variable would be the independent variable (grouping factor).
-                                    Click on the link to learn more about this method!")
+                                    Click on the link to learn more about this method!"
                 }
 
 
                 else if (is.numeric(dependent) && is.numeric(independent)) {
-                    advice <- paste(startAdvice,
-                                    "the <a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Pearson correlation coefficient</a>,
+                    advice <- "You have entered a numeric variable for Variable 1 / Dependent Variable and a numeric variable for 
+                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Pearson correlation coefficient</a>,
                                     which is a measure for the strength of the linear relationship between two variables,
                                     seems to be a good option for you! In order to perform this analysis, go to:
                                     <br><br>
@@ -386,7 +388,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     <a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a>. The test outcomes of
                                     both methods will be equivalent.
                                     <br><br>
-                                    Click on the links to learn more about these methods!")
+                                    Click on the links to learn more about these methods!"
                 }
 
                 else {
@@ -424,8 +426,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
                 if (is.factor(dependent) && numberUniqueValuesDependent == 2) {
                     if (any(independentNeedsDummy) && !any(independentDichotomous)) {
-                        advice <- paste(startAdvice,
-                                         "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
+                        advice <- paste("You have entered a dichotomous dependent variable and several independent variables. 
+                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                          seems to be a good option for you! In order to perform this analysis, go to:
                                          <br><br>
                                          Regression > 2 Outcomes - Binomial",
@@ -434,8 +436,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
                     }
                     else if (any(independentCategorical)) {
-                        advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
+                        advice <- paste("You have entered a dichotomous dependent variable and several independent variables. 
+                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > 2 Outcomes - Binomial",
@@ -443,8 +445,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         "Click on the link to learn more about this method!")
                     }
                     else {
-                        advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
+                        advice <- paste("You have entered a dichotomous dependent variable and several independent variables. 
+                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > 2 Outcomes - Binomial",
@@ -453,30 +455,30 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                 }
                 else if (is.ordered(dependent)) {
-                    advice <- paste(startAdvice,
-                                    "ordinal logistic regression analysis seems to be a good option for you! Ordinal logistic regression
+                    advice <- paste("You have entered an ordinal dependent variable and several independent variables. 
+                                         Hence, ordinal logistic regression analysis seems to be a good option for you! Ordinal logistic regression
                                      is currently not available in Jamovi. You could use other software to perform the analysis (e.g., R or SPSS).")
                 }
                 else if (is.factor(dependent)) {
                     if (any(independentNeedsDummy) && !any(independentDichotomous)) {
-                        advice <- paste(startAdvice,
-                                        "multinomial logistic regression analysis
+                        advice <- paste("You have entered a nominal dependent variable and several independent variables. 
+                                         Hence, multinomial logistic regression analysis
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > N Outcomes - Multinomial",
                                         stepsNoControlsCodeVars)
                     }
                     else if (any(independentCategorical)) {
-                        advice <- paste(startAdvice,
-                                        "multinomial logistic regression analysis
+                        advice <- paste("You have entered a nominal dependent variable and several independent variables. 
+                                         Hence, multinomial logistic regression analysis
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > N Outcomes - Multinomial",
                                         stepsNoControlsCategorical)
                     }
                     else {
-                        advice <- paste(startAdvice,
-                                        "multinomial logistic regression analysis
+                        advice <- paste("You have entered a nominal dependent variable and several independent variables. 
+                                         Hence, multinomial logistic regression analysis
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > N Outcomes - Multinomial",
@@ -486,8 +488,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 else if (is.numeric(dependent)) {
                     if (all(independentCategorical)) {
                         if (length(namesIndependents) == 2) {
-                            advice <- paste(startAdvice,
-                                            "a <a href= 'https://statkat.com/stattest.php?&t=12' target='_blank'>two way ANOVA</a>
+                            advice <- "You have entered a numeric dependent variable and two categorical (nominal/ordinal) independent variables. 
+                                            Hence, a <a href= 'https://statkat.com/stattest.php?&t=12' target='_blank'>two way ANOVA</a>
                                             seems to be a good option for you! In order to perform this test, go to:
                                             <br><br>
                                             ANOVA > ANOVA
@@ -495,24 +497,25 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                             <li>Drop your numeric dependent variable in the box below Dependent Variable and your two independent (grouping) variables
                                                 in the box below Fixed Factors</li>
                                             </ul>
-                                            Click on the link to learn more about this method!")
+                                            Click on the link to learn more about this method!"
                         }
                         else {
-                            advice <- paste(startAdvice,
-                                            "an ANOVA
+                            advice <- "You have entered a numeric dependent variable and several categorical (nominal/ordinal) independent variables. 
+                                            Hence, an ANOVA
                                             seems to be a good option for you! In order to perform this test, go to:
                                             <br><br>
                                             ANOVA > ANOVA
                                             <ul>
                                             <li>Drop your numeric dependent variable in the box below Dependent Variable and your independent (grouping) variables
                                             in the box below Fixed Factors</li>
-                                            </ul>")
+                                            </ul>"
                         }
 
                     }
                     else if (any(independentNeedsDummy) && !any(independentDichotomous)) {
-                        advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
+                        advice <- paste("You have entered a numeric dependent variable and several independent variables. Some independent variables are numeric
+                                        and some independent variables are categorical (nominal/ordinal). 
+                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > Linear Regression",
@@ -520,8 +523,9 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         "Click on the link to learn more about this method!")
                     }
                     else if (any(independentCategorical)) {
-                        advice <-  paste(startAdvice,
-                                         "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
+                        advice <-  paste("You have entered a numeric dependent variable and several independent variables. Some independent variables are numeric
+                                        and some independent variables are categorical (nominal/ordinal). 
+                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
                                          seems to be a good option for you! In order to perform this analysis, go to:
                                          <br><br>
                                          Regression > Linear Regression",
@@ -529,8 +533,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                          "Click on the link to learn more about this method!")
                     }
                     else {
-                        advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
+                        advice <- paste("You have entered a numeric dependent variable and several numeric independent variables. 
+                                        Hence, <a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > Linear Regression",
@@ -576,8 +580,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
                 if (is.factor(dependent) && numberUniqueValuesDependent == 2) {
                     if (any(independentNeedsDummy) || any(controlNeedsDummy) && !any(independentDichotomous) && !any(controlDichotomous)) {
-                        advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
+                        advice <- paste("You have entered a dichotomous dependent variable, one or more independent variables, and one or more control variables. Hence, 
+                                        <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > 2 Outcomes - Binomial",
@@ -585,8 +589,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                        " Click on the link to learn more about this method!")
                     }
                     else if (any(independentCategorical) || any(controlCategorical)) {
-                        advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
+                        advice <- paste("You have entered a dichotomous dependent variable, one or more independent variables, and one or more control variables. Hence, 
+                                        <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > 2 Outcomes - Binomial",
@@ -594,8 +598,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         "Click on the link to learn more about this method!")
                     }
                     else {
-                        advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
+                        advice <- paste("You have entered a dichotomous dependent variable, one or more independent variables, and one or more control variables. Hence, 
+                                        <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > 2 Outcomes - Binomial",
@@ -605,31 +609,31 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 }
 
                 else if (is.ordered(dependent)) {
-                    advice <- paste(startAdvice,
-                                    "ordinal logistic regression analysis seems to be a good option for you! Ordinal logistic regression
+                    advice <- paste("You have entered an ordinal dependent variable, one or more independent variables, and one or more control variables. 
+                                    Hence, ordinal logistic regression analysis seems to be a good option for you! Ordinal logistic regression
                                     is currently not available in Jamovi. You could use other software to perform the analysis (e.g., R or SPSS).")
                 }
 
                 else if (is.factor(dependent)) {
                     if (any(independentNeedsDummy) || any(controlNeedsDummy) && !any(independentDichotomous) && !any(controlDichotomous)) {
-                        advice <- paste(startAdvice,
-                                  "multinomial logistic regression
+                        advice <- paste("You have entered a nominal dependent variable, one or more independent variables, and one or more control variables. 
+                                   Hence, multinomial logistic regression
                                    seems to be a good option for you! In order to perform this analysis, go to:
                                    <br><br>
                                    Regression > N Outcomes - Multinomial",
                                    stepsWithControlsCodeVars)
                     }
                     else if (any(independentCategorical) || any(controlCategorical)) {
-                        advice <- paste(startAdvice,
-                                      "multinomial logistic regression
+                        advice <- paste("You have entered a nominal dependent variable, one or more independent variables, and one or more control variables. 
+                                   Hence, multinomial logistic regression
                                       seems to be a good option for you! In order to perform this analysis, go to:
                                       <br><br>
                                       Regression > N Outcomes - Multinomial",
                                       stepsWithControlsCategorical)
                     }
                     else {
-                        advice <- paste(startAdvice,
-                                       "multinomial logistic regression
+                        advice <- paste("You have entered a nominal dependent variable, one or more independent variables, and one or more control variables. 
+                                        Hence, multinomial logistic regression
                                         seems to be a good option for you! In order to perform this analysis, go to:
                                         <br><br>
                                         Regression > N Outcomes - Multinomial",
@@ -640,8 +644,9 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 else if (is.numeric(dependent)) {
                     if (all(independentCategorical) && all(controlCategorical)) {
                         if (length(namesIndependents) == 1 && length(namesControls) == 1) {
-                            advice <- paste(startAdvice,
-                                            "a <a href= 'https://statkat.com/stattest.php?&t=12' target='_blank'>two way ANOVA</a>
+                            advice <- "You have entered a numeric dependent variable, a categorical (nominal/ordinal) independent variable, and a 
+                                        categorical (nominal/ordinal) control variable.  
+                                        Hence, a <a href= 'https://statkat.com/stattest.php?&t=12' target='_blank'>two way ANOVA</a>
                                             seems to be a good option for you! In order to perform this test, go to:
                                             <br><br>
                                             ANOVA > ANOVA
@@ -649,24 +654,26 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                             <li>Drop your numeric dependent variable in the box below Dependent Variable and your nominal/ordinal independent and control
                                             variables in the box below Fixed Factors</li>
                                             </ul>
-                                            Click on the link to learn more about this method!")
+                                            Click on the link to learn more about this method!"
                         }
                         else {
-                            advice <- paste(startAdvice,
-                                            "an ANOVA
+                            advice <- "You have entered a numeric dependent variable, one or more categorical (nominal/ordinal) independent variables, and 
+                                        one or more categorical (nominal/ordinal) control variables.  
+                                        Hence, an ANOVA
                                             seems to be a good option for you! In order to perform this test, go to:
                                             <br><br>
                                             ANOVA > ANOVA
                                             <ul>
                                             <li>Drop your numeric dependent variable in the box below Dependent Variable and your nominal/ordinal independent and control
                                             variables in the box below Fixed Factors</li>
-                                            </ul>")
+                                            </ul>"
                         }
                     }
 
                     else if (all(independentCategorical) && !any(controlCategorical)) {
-                        advice <- paste(startAdvice,
-                                        "an ANCOVA
+                        advice <- "You have entered a numeric dependent variable, one or more categorical (nominal/ordinal) independent variables, and 
+                                        one or more numeric control variables.  
+                                        Hence, an ANCOVA
                                         seems to be a good option for you! In order to perform this test, go to:
                                         <br><br>
                                         ANOVA > ANCOVA
@@ -674,11 +681,12 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <li>Drop your numeric dependent variable in the box below Dependent Variable</li>
                                         <li>Drop your nominal/ordinal independent variables in the box below Fixed Factors</li>
                                         <li>Drop your numeric control variables in the box below Covariates</li>
-                                        </ul>")
+                                        </ul>"
                     }
                     else if (all(independentCategorical)) {
-                        advice <- paste(startAdvice,
-                                        "an ANCOVA
+                        advice <- "You have entered a numeric dependent variable, one or more categorical (nominal/ordinal) independent variables, and 
+                                        one or more control variables. Some of your control variables are categorical (nominal/ordinal) and some are numeric.  
+                                        Hence, an ANCOVA
                                         seems to be a good option for you! In order to perform this test, go to:
                                         <br><br>
                                         ANOVA > ANCOVA
@@ -686,11 +694,12 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <li>Drop your numeric dependent variable in the box below Dependent Variable</li>
                                         <li>Drop your nominal/ordinal independent and control variables in the box below Fixed Factors</li>
                                         <li>Drop your numeric control variables in the box below Covariates</li>
-                                        </ul>")
+                                        </ul>"
                     }
                     else if (any(independentNeedsDummy) || any(controlNeedsDummy) && !any(independentDichotomous) && !any(controlDichotomous)) {
-                        advice <- paste(startAdvice,
-                                          "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
+                        advice <- paste("You have entered a numeric dependent variable, one or more independent variables, and one or more control variables.
+                                        At least some of your independent variables are numeric.   
+                                        Hence, a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
                                           seems to be a good option for you! In order to perform this analysis, go to:
                                           <br><br>
                                           Regression > Linear Regression",
@@ -698,8 +707,9 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                           "Click on the link to learn more about this method!")
                                 }
                     else if (any(independentCategorical) || any(controlCategorical)) {
-                        advice <- paste(startAdvice,
-                                    "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
+                        advice <- paste("You have entered a numeric dependent variable, one or more independent variables, and one or more control variables.
+                                        At least some of your independent variables are numeric. Hence, 
+                                      <a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
                                      seems to be a good option for you! In order to perform this analysis, go to:
                                      <br><br>
                                      Regression > Linear Regression",
@@ -707,13 +717,13 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     "Click on the link to learn more about this method!")
                     }
                     else {
-                        advice <- paste(startAdvice,
-                                        "<a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
-                                     seems to be a good option for you! In order to perform this analysis, go to:
-                                     <br><br>
-                                     Regression > Linear Regression",
-                                     stepsWithControlsAllNumeric,
-                                     "Click on the link to learn more about this method!")
+                        advice <- paste("You have entered a numeric dependent variable, one or more numeric independent variables, and one or more numeric control variables.
+                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
+                                         seems to be a good option for you! In order to perform this analysis, go to:
+                                         <br><br>
+                                         Regression > Linear Regression",
+                                         stepsWithControlsAllNumeric,
+                                         "Click on the link to learn more about this method!")
                     }
 
                 }
