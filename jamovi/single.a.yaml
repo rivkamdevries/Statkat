@@ -6,7 +6,7 @@ version: '1.0.0'
 jas: '1.1'
 
 description:
-    main: Find an appropriate method given the measurement level of your data - single variable
+    main: Provides a recommended statistical method given the measurement level of your data. Appropriate when you are interested in a single variable.
     R:
         dontrun: false
         usage: |

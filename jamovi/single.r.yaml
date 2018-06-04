@@ -7,13 +7,13 @@ items:
     - name:  advice
       title: Advice
       type: Html
-      description: our method recommendation
+      description: the method recommendation
       visible: (text)
       
     - name: plot
       title: Scatter plot
       type: Image
-      description: scatter plot of the data
+      description: a scatter plot of the data
       width:  400
       height: 300
       renderFun: .plot

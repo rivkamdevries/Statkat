@@ -18,23 +18,23 @@ analyses:
     menuGroup: Statkat
     menuTitle: Single Variable
     description: >-
-      Find an appropriate method given the measurement level of your data -
-      single variable
+      Provides a recommended statistical method given the measurement level of
+      your data. Appropriate when you are interested in a single variable.
   - title: Correlational Research
     name: correlational
     ns: Statkat
     menuGroup: Statkat
     menuTitle: Correlational Research
     description: >-
-      Find an appropriate method given the measurement level of your data -
-      correlational research.
+      Provides a recommended statistical method given the measurement level of
+      your data. Appropriate for correlational research.
   - title: Repeated Measurements
     name: repeated
     ns: Statkat
     menuGroup: Statkat
     menuTitle: Repeated Measurements
     description: >-
-      Find an appropriate method given the measurement level of your data -
-      repeated measurements
+      Provides a recommended statistical method given the measurement level of
+      your data. Appropriate for repeated measurements.
 
 ...

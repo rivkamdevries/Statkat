@@ -78,8 +78,8 @@ correlationalBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 
 #' Correlational Research
 #'
-#' Find an appropriate method given the measurement level of your data - 
-#' correlational research.
+#' Provides a recommended statistical method given the measurement level of 
+#' your data. Appropriate for correlational research.
 #'
 #' @examples
 #' exampleData <- data.frame(x1 = rnorm(20),
@@ -102,7 +102,7 @@ correlationalBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #'   variable(s) from \code{data}
 #' @return A results object containing:
 #' \tabular{llllll}{
-#'   \code{results$advice} \tab \tab \tab \tab \tab our method recommendation \cr
+#'   \code{results$advice} \tab \tab \tab \tab \tab the method recommendation \cr
 #' }
 #'
 #' @export

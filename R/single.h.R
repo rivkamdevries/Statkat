@@ -72,8 +72,8 @@ singleBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 
 #' Single Variable
 #'
-#' Find an appropriate method given the measurement level of your data - 
-#' single variable
+#' Provides a recommended statistical method given the measurement level of 
+#' your data. Appropriate when you are interested in a single variable.
 #'
 #' @examples
 #' exampleData <- data.frame(x1 = rnorm(20),
@@ -90,8 +90,8 @@ singleBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' @param variable a string naming a variable from \code{data}
 #' @return A results object containing:
 #' \tabular{llllll}{
-#'   \code{results$advice} \tab \tab \tab \tab \tab our method recommendation \cr
-#'   \code{results$plot} \tab \tab \tab \tab \tab scatter plot of the data \cr
+#'   \code{results$advice} \tab \tab \tab \tab \tab the method recommendation \cr
+#'   \code{results$plot} \tab \tab \tab \tab \tab a scatter plot of the data \cr
 #' }
 #'
 #' @export

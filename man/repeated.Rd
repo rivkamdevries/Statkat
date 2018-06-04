@@ -17,12 +17,12 @@ repeated(data, variables)
 \value{
 A results object containing:
 \tabular{llllll}{
-  \code{results$advice} \tab \tab \tab \tab \tab our method recommendation \cr
+  \code{results$advice} \tab \tab \tab \tab \tab the method recommendation \cr
 }
 }
 \description{
-Find an appropriate method given the measurement level of your data - 
-repeated measurements
+Provides a recommended statistical method given the measurement level of 
+your data. Appropriate for repeated measurements.
 }
 \examples{
 exampleData <- data.frame(x1 = rnorm(20),

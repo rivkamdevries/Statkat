@@ -7,7 +7,7 @@ items:
     - name:  advice
       title: Advice
       type: Html
-      description: our method recommendation
+      description: the method recommendation
       visible: (text)
 
 ...
