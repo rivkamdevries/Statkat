@@ -90,8 +90,8 @@ singleBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' @param variable a string naming a variable from \code{data}
 #' @return A results object containing:
 #' \tabular{llllll}{
-#'   \code{results$advice} \tab \tab \tab \tab \tab a html \cr
-#'   \code{results$plot} \tab \tab \tab \tab \tab an image \cr
+#'   \code{results$advice} \tab \tab \tab \tab \tab our method recommendation \cr
+#'   \code{results$plot} \tab \tab \tab \tab \tab scatter plot of the data \cr
 #' }
 #'
 #' @export

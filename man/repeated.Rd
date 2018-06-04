@@ -17,7 +17,7 @@ repeated(data, variables)
 \value{
 A results object containing:
 \tabular{llllll}{
-  \code{results$advice} \tab \tab \tab \tab \tab a html \cr
+  \code{results$advice} \tab \tab \tab \tab \tab our method recommendation \cr
 }
 }
 \description{
