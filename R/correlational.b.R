@@ -31,9 +31,16 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                           also to the independent variables. In experiments (with random assignment), control variables are often included to increase 
                           power. In observational studies, control variables are often included mainly to equate subjects on the control variables. This
                           prevents the control variables from confounding the relationships between the independent variables and the dependent variable.
+                          <br><br>
+                          Note:<br>
+                          Our advice is based on the measurement level of your data and on the number of variables entered. There can be details related to your data, task, or assignment 
+                          that may render the advice moot. Always check the assumptions made by the statistical method before interpreting the results. 
+                          We always try to come up with the least complicated method that might be applicable given your data. Keep in mind that there may be other, more advanced, 
+                          methods that might be applicable as well.
                 "
                 html <- self$results$advice
-                return(html$setContent(advice))
+                html$setContent(advice)
+                return()
             }
 
             dependent <- self$data[[nameDependent]]
@@ -45,7 +52,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             if (dependentEmpty || any(independentEmpty) || (!is.null(namesControls) && any(controlsEnteredEmpty))) {
                 advice <- "All entered variables should contain data"
                 html <- self$results$advice
-                return(html$setContent(advice))
+                html$setContent(advice)
+                return()
             }
 
             numberUniqueValuesDependent <- length(unique(na.omit(dependent)))
@@ -58,7 +66,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 advice <- "At least one of the variables entered is constant. This means that all subjects have the same score on the variable.
                                 There needs to be variability in the scores on a variable in order to use it in statistical analyses."
                 html <- self$results$advice
-                return(html$setContent(advice))
+                html$setContent(advice)
+                return()
             }
 
             oneIndependent <- length(namesIndependents) == 1 && is.null(namesControls)

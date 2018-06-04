@@ -19,9 +19,16 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                           interested in differences between related variables. To get started, drop two or more related variables 
                           in the white box below Related Variables. Our tool will then come up with a statistical method that may 
                           be appropriate for your data!
+                         <br><br>
+                          Note:<br>
+                          Our advice is based on the measurement level of your data and on the number of related variables entered. There can be details related to your data, task, or assignment 
+                          that may render the advice moot. Always check the assumptions made by the statistical method before interpreting the results. 
+                          We always try to come up with the least complicated method that might be applicable given your data. Keep in mind that there may be other, more advanced, 
+                          methods that might be applicable as well.
                 "
                 html <- self$results$advice
-                return(html$setContent(advice))
+                html$setContent(advice)
+                return()
             }
 
             dataVector = unlist(self$data[namesVariables])
@@ -29,7 +36,8 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             if (length(na.omit(dataVector)) == 0) {
                 advice <- "The entered variables should contain data"
                 html <- self$results$advice
-                return(html$setContent(advice))
+                html$setContent(advice)
+                return()
             }
 
             numberUniqueValues <- length(unique(na.omit(dataVector)))
@@ -37,7 +45,8 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             if (numberUniqueValues < 2) {
                 advice <- "All subjects have the same score on all the variables. There should be some variability in the scores in order to perform statistical analysis"
                 html <- self$results$advice
-                return(html$setContent(advice))
+                html$setContent(advice)
+                return()
             }
 
             measurementLevel <- sapply(namesVariables, function(variable) {
@@ -58,7 +67,8 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             if (length(unique(measurementLevel)) > 1) {
                 advice <- "All entered variables should have the same measurement level"
                 html <- self$results$advice
-                return(html$setContent(advice))
+                html$setContent(advice)
+                return()
             }
 
             if (length(namesVariables) == 2) {

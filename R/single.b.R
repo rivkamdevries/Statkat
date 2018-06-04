@@ -12,10 +12,17 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                           This tool will help you to find an appropriate statistical method given the measurement level of your data.
                           Make sure you have correctly defined the measurement levels of your variables on the Data tab.
                           <br><br>
-                          To get started, drop a variable in the white box below Variable. Our tool will then come up with a statistical method that may be appropriate for your data! 
+                          To get started, drop a variable in the white box below Variable. Our tool will then come up with a statistical method that may be appropriate for your data!
+                          <br><br>
+                          Note:<br>
+                          Our advice is based on the measurement level of your data. There can be details related to your data, task, or assignment that may render the advice moot. 
+                          Always check the assumptions made by the statistical method before interpreting the results. 
+                          We always try to come up with the least complicated method that might be applicable given your data. Keep in mind that there may be other, more advanced, 
+                          methods that might be applicable as well.
                           "
                 html <- self$results$advice
-                return(html$setContent(advice))
+                html$setContent(advice)
+                return()
             }
 
             var <- self$data[[nameVar]]
@@ -23,7 +30,8 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             if (length(na.omit(var)) == 0) {
                 advice <- "The entered variable should contain data."
                 html <- self$results$advice
-                return(html$setContent(advice))
+                html$setContent(advice)
+                return()
             }
 
             numberUniqueValues <- length(unique(na.omit(var)))
@@ -32,7 +40,8 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 advice <- "The entered variable is constant. This means that all subjects have the same score on the variable.
                            There needs to be variability in the scores on a variable in order to use it in statistical analyses."
                 html <- self$results$advice
-                return(html$setContent(advice))
+                html$setContent(advice)
+                return()
             }
 
 
