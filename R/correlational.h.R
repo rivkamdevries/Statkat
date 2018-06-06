@@ -43,7 +43,8 @@ correlationalOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
 correlationalResults <- if (requireNamespace('jmvcore')) R6::R6Class(
     inherit = jmvcore::Group,
     active = list(
-        advice = function() private$.items[["advice"]]),
+        advice = function() private$.items[["advice"]],
+        plots = function() private$.items[["plots"]]),
     private = list(),
     public=list(
         initialize=function(options) {
@@ -55,7 +56,17 @@ correlationalResults <- if (requireNamespace('jmvcore')) R6::R6Class(
                 options=options,
                 name="advice",
                 title="Advice",
-                visible="(text)"))}))
+                visible="(text)"))
+            self$add(jmvcore::Array$new(
+                options=options,
+                name="plots",
+                title="Scatter plots",
+                items="(independents)",
+                template=jmvcore::Image$new(
+                    options=options,
+                    width=400,
+                    height=300,
+                    renderFun=".plot")))}))
 
 correlationalBase <- if (requireNamespace('jmvcore')) R6::R6Class(
     "correlationalBase",
@@ -103,6 +114,7 @@ correlationalBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' @return A results object containing:
 #' \tabular{llllll}{
 #'   \code{results$advice} \tab \tab \tab \tab \tab the method recommendation \cr
+#'   \code{results$plots} \tab \tab \tab \tab \tab scatter plots of the data \cr
 #' }
 #'
 #' @export

@@ -10,4 +10,14 @@ items:
       description: the method recommendation
       visible: (text)
 
+    - name: plots
+      title: Scatter plots
+      type: Array
+      description: scatter plots of the data
+      items: (independents)
+      template:
+        type: Image
+        width:  400
+        height: 300
+        renderFun: .plot
 ...
