@@ -104,24 +104,20 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             html <- self$results$advice
             html$setContent(advice)
             
-          
-            
-            N <- length(var)
-            plotData <- data.frame(x = rnorm(N, 0, .02), y = var)
-            
-            image <- self$results$plot
-            image$setState(plotData)
         },
-        .plot = function(image, ...) {
+        .plot = function(image, theme, ggtheme, ...) {
           if (is.null(self$options$variable)) {
             return (FALSE)
           }
           
-          plotData <- image$state
+          var <- self$data[[self$options$variable]]
+          N <- length(var)
           
-          if (length(plotData[['x']]) == 0) {
+          if (N == 0) {
             return (FALSE)
           }
+          
+          plotData <- data.frame(x = rnorm(N, 0, .02), y = var)
           
           plot <- ggplot(plotData, aes(x = x, y = y)) + 
             geom_point() + 
@@ -133,7 +129,8 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                   panel.grid.minor = element_blank(),
                   panel.background = element_blank(), 
                   axis.line = element_line(colour = "black")) +
-            xlab("") + ylab(self$options$variable)
+            xlab("") + ylab(self$options$variable) +
+            ggtheme
 
           print(plot)
           TRUE

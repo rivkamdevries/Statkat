@@ -49,6 +49,7 @@ singleResults <- if (requireNamespace('jmvcore')) R6::R6Class(
                 title="Scatter plot",
                 width=400,
                 height=300,
+                requiresData=TRUE,
                 renderFun=".plot"))}))
 
 singleBase <- if (requireNamespace('jmvcore')) R6::R6Class(

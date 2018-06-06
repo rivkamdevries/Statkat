@@ -16,6 +16,7 @@ items:
       description: a scatter plot of the data
       width:  400
       height: 300
+      requiresData: true
       renderFun: .plot
       
 
