@@ -746,5 +746,9 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             html <- self$results$advice
             html$setContent(advice)
 
+        },
+        .plot=function(image, theme, ggtheme, ...) {
+          plot(NULL, NULL, main=image$key, xlim=c(0,1), ylim=c(0,1))
+          TRUE
         })
 )
