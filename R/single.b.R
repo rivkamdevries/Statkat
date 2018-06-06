@@ -105,7 +105,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             html$setContent(advice)
             
         },
-        .plot = function(image, ...) {
+        .plot = function(image, theme, ggtheme, ...) {
           if (is.null(self$options$variable)) {
             return (FALSE)
           }
@@ -129,7 +129,8 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                   panel.grid.minor = element_blank(),
                   panel.background = element_blank(), 
                   axis.line = element_line(colour = "black")) +
-            xlab("") + ylab(self$options$variable)
+            xlab("") + ylab(self$options$variable) +
+            ggtheme
 
           print(plot)
           TRUE
