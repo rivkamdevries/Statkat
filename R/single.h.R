@@ -46,7 +46,7 @@ singleResults <- if (requireNamespace('jmvcore')) R6::R6Class(
             self$add(jmvcore::Image$new(
                 options=options,
                 name="plot",
-                title="Scatter plot",
+                title="Scatter Plot",
                 width=400,
                 height=300,
                 requiresData=TRUE,

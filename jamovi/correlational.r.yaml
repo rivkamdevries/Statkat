@@ -11,7 +11,7 @@ items:
       visible: (text)
 
     - name: plots
-      title: Scatter plots
+      title: Scatter Plots
       type: Array
       description: scatter plots of the data
       items: (independents)
