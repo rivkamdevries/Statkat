@@ -11,11 +11,12 @@ items:
       visible: (text)
 
     - name: plots
-      title: Scatter Plots
+      title: Scatter Plots of Bivariate Relationships
       type: Array
       description: scatter plots of the data
       items: (independents)
       template:
+        requiresData: true
         type: Image
         width:  400
         height: 300

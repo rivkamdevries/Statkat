@@ -60,10 +60,11 @@ correlationalResults <- if (requireNamespace('jmvcore')) R6::R6Class(
             self$add(jmvcore::Array$new(
                 options=options,
                 name="plots",
-                title="Scatter Plots",
+                title="Scatter Plots of Bivariate Relationships",
                 items="(independents)",
                 template=jmvcore::Image$new(
                     options=options,
+                    requiresData=TRUE,
                     width=400,
                     height=300,
                     renderFun=".plot")))}))

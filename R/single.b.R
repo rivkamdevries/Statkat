@@ -117,21 +117,21 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             return (FALSE)
           }
           
-          plotData <- data.frame(x = rnorm(N, 0, .02), y = var)
-          
-          plot <- ggplot(plotData, aes(x = x, y = y)) + 
-            geom_point() + 
-            xlim(-1, 1) + 
+          plotData <- data.frame(x = runif(N, -.03, .03), y = var)
+
+          plot <- ggplot(plotData, aes(x = x, y = y)) +
+            geom_point() +
+            xlim(-1, 1) +
+            ggtheme +
             theme(axis.title.x = element_blank(),
                   axis.text.x = element_blank(),
-                  axis.ticks.x = element_blank()) + 
-            theme(panel.grid.major = element_blank(), 
+                  axis.ticks.x = element_blank()) +
+            theme(panel.grid.major = element_blank(),
                   panel.grid.minor = element_blank(),
-                  panel.background = element_blank(), 
+                  panel.background = element_blank(),
                   axis.line = element_line(colour = "black")) +
-            xlab("") + ylab(self$options$variable) +
-            ggtheme
-
+            xlab("") + ylab(self$options$variable)
+ 
           print(plot)
           TRUE
         })

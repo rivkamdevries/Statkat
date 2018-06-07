@@ -748,7 +748,68 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
         },
         .plot=function(image, theme, ggtheme, ...) {
-          plot(NULL, NULL, main=image$key, xlim=c(0,1), ylim=c(0,1))
+          if (is.null(self$options$dep) || is.null(self$options$independents)) {
+            return (FALSE)
+          }
+          
+          nameDependent <- self$options$dep
+          nameIndependent <- image$key
+          
+          y <- self$data[[nameDependent]]
+          x <- self$data [[nameIndependent]]
+          
+          N = length(y)
+          
+          if (N == 0 || all(is.na(y)) || all(is.na(x))) {
+            return (FALSE)
+          }
+          
+          if (is.factor(y) && is.factor(x)) {
+            xaxisLabel <- paste(nameIndependent, " (jittered)")
+            yaxisLabel <- paste(nameDependent, " (jittered)")
+            widthJitter = .1
+            heightJitter = .1
+          }
+          
+          else if (is.factor(x)) {
+            xaxisLabel <- paste(nameIndependent, " (jittered)")
+            yaxisLabel <- nameDependent
+            widthJitter = .1
+            heightJitter = 0
+          }
+          
+          else if (is.factor(y)) {
+            xaxisLabel <- nameIndependent
+            yaxisLabel <- paste(nameDependent, " (jittered)")
+            widthJitter = 0
+            heightJitter = .1
+          }
+          
+          else {
+            xaxisLabel <- nameIndependent
+            yaxisLabel <- nameDependent
+            widthJitter = 0
+            heightJitter = 0
+          }
+          
+          
+          plotData <- data.frame(x = x, y = y)
+          
+          
+          plot <- ggplot(plotData, aes(x = x, y = y)) + 
+            geom_point() + 
+            geom_jitter(width = widthJitter, height = heightJitter) + 
+            ggtheme + 
+            theme(panel.grid.major = element_blank(), 
+                  panel.grid.minor = element_blank(),
+                  panel.background = element_blank(), 
+                  axis.line = element_line(colour = "black")) +
+            xlab(xaxisLabel) + ylab(yaxisLabel) +
+            ggtitle(nameIndependent) +
+            theme(plot.title = element_text(hjust = 0.5))
+        
+          
+          print(plot)
           TRUE
         })
 )
