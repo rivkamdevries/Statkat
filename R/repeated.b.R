@@ -185,20 +185,20 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
           for (variable in namesVariables) {
             group <- c(group, rep(variable, N))
           }
+          group <- factor(group, levels = unique(group))
           dataVector = unlist(self$data[namesVariables])
           
           plotData <- data.frame(x = group, y = dataVector)
           
           plot <- ggplot(plotData, aes(x = x, y = y)) +
-            geom_point() +
             geom_jitter(width = .1, height = 0) +
             ggtheme +
             theme(panel.grid.major = element_blank(),
                   panel.grid.minor = element_blank(),
                   panel.background = element_blank(),
                   axis.line = element_line(colour = "black")) +
-            xlab("Variable") + ylab("Scores")
-          
+            xlab("Variable") + ylab("Scores") 
+           
           suppressWarnings(
             suppressMessages(
               print(plot)

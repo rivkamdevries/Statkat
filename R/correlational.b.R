@@ -797,7 +797,6 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
           
           
           plot <- ggplot(plotData, aes(x = x, y = y)) + 
-            geom_point() + 
             geom_jitter(width = widthJitter, height = heightJitter) + 
             ggtheme + 
             theme(panel.grid.major = element_blank(), 

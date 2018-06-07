@@ -18,6 +18,7 @@ repeated(data, variables)
 A results object containing:
 \tabular{llllll}{
   \code{results$advice} \tab \tab \tab \tab \tab the method recommendation \cr
+  \code{results$plot} \tab \tab \tab \tab \tab a scatter plot of the data \cr
 }
 }
 \description{
