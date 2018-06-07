@@ -758,12 +758,6 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
           y <- self$data[[nameDependent]]
           x <- self$data [[nameIndependent]]
           
-          N = length(y)
-          
-          if (N == 0) {
-            return (FALSE)
-          }
-          
           if (is.factor(y) && is.factor(x)) {
             xaxisLabel <- paste(nameIndependent, " (jittered)")
             yaxisLabel <- paste(nameDependent, " (jittered)")
@@ -792,9 +786,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             heightJitter = 0
           }
           
-          
           plotData <- data.frame(x = x, y = y)
-          
           
           plot <- ggplot(plotData, aes(x = x, y = y)) + 
             geom_jitter(width = widthJitter, height = heightJitter) + 

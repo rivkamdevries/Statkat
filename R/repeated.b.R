@@ -177,10 +177,6 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
           
           N <- length(self$data[[namesVariables[1]]])
           
-          if (N == 0) {
-            return (FALSE)
-          }
-          
           group <- c()
           for (variable in namesVariables) {
             group <- c(group, rep(variable, N))
