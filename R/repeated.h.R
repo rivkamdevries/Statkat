@@ -29,7 +29,8 @@ repeatedOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
 repeatedResults <- if (requireNamespace('jmvcore')) R6::R6Class(
     inherit = jmvcore::Group,
     active = list(
-        advice = function() private$.items[["advice"]]),
+        advice = function() private$.items[["advice"]],
+        plot = function() private$.items[["plot"]]),
     private = list(),
     public=list(
         initialize=function(options) {
@@ -41,7 +42,15 @@ repeatedResults <- if (requireNamespace('jmvcore')) R6::R6Class(
                 options=options,
                 name="advice",
                 title="Advice",
-                visible="(text)"))}))
+                visible="(text)"))
+            self$add(jmvcore::Image$new(
+                options=options,
+                name="plot",
+                title="Scatter Plot",
+                width=400,
+                height=300,
+                requiresData=TRUE,
+                renderFun=".plot"))}))
 
 repeatedBase <- if (requireNamespace('jmvcore')) R6::R6Class(
     "repeatedBase",
@@ -88,6 +97,7 @@ repeatedBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' @return A results object containing:
 #' \tabular{llllll}{
 #'   \code{results$advice} \tab \tab \tab \tab \tab the method recommendation \cr
+#'   \code{results$plot} \tab \tab \tab \tab \tab a scatter plot of the data \cr
 #' }
 #'
 #' @export

@@ -168,5 +168,42 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             html <- self$results$advice
             html$setContent(advice)
 
+        },
+        .plot = function(image, theme, ggtheme, ...) {
+          namesVariables <- self$options$variables
+          if (length(namesVariables) < 2) {
+            return (FALSE)
+          }
+          
+          N <- length(self$data[[namesVariables[1]]])
+          
+          if (N == 0) {
+            return (FALSE)
+          }
+          
+          group <- c()
+          for (variable in namesVariables) {
+            group <- c(group, rep(variable, N))
+          }
+          dataVector = unlist(self$data[namesVariables])
+          
+          plotData <- data.frame(x = group, y = dataVector)
+          
+          plot <- ggplot(plotData, aes(x = x, y = y)) +
+            geom_point() +
+            geom_jitter(width = .1, height = 0) +
+            ggtheme +
+            theme(panel.grid.major = element_blank(),
+                  panel.grid.minor = element_blank(),
+                  panel.background = element_blank(),
+                  axis.line = element_line(colour = "black")) +
+            xlab("Variable") + ylab("Scores")
+          
+          suppressWarnings(
+            suppressMessages(
+              print(plot)
+            )
+          )
+          TRUE
         })
 )

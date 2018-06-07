@@ -760,7 +760,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
           
           N = length(y)
           
-          if (N == 0 || all(is.na(y)) || all(is.na(x))) {
+          if (N == 0) {
             return (FALSE)
           }
           

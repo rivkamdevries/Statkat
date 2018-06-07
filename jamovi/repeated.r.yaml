@@ -9,5 +9,14 @@ items:
       type: Html
       description: the method recommendation
       visible: (text)
+      
+    - name: plot
+      title: Scatter Plot
+      type: Image
+      description: a scatter plot of the data
+      width:  400
+      height: 300
+      requiresData: true
+      renderFun: .plot
 
 ...
