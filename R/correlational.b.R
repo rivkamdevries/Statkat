@@ -756,7 +756,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
           nameIndependent <- image$key
           
           y <- self$data[[nameDependent]]
-          x <- self$data [[nameIndependent]]
+          x <- self$data[[nameIndependent]]
           
           if (is.factor(y) && is.factor(x)) {
             xaxisLabel <- paste(nameIndependent, " (jittered)")
