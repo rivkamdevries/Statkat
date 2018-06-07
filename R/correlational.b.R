@@ -809,7 +809,11 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             theme(plot.title = element_text(hjust = 0.5))
         
           
-          print(plot)
+          suppressWarnings(
+            suppressMessages(
+              print(plot)
+            )
+          )
           TRUE
         })
 )

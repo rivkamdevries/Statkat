@@ -132,7 +132,11 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                   axis.line = element_line(colour = "black")) +
             xlab("") + ylab(self$options$variable)
  
-          print(plot)
+          suppressWarnings(
+            suppressMessages(
+              print(plot)
+            )
+          )
           TRUE
         })
 )
