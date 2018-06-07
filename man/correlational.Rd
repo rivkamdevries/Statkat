@@ -24,7 +24,8 @@ variable(s) from \code{data}}
 A results object containing:
 \tabular{llllll}{
   \code{results$advice} \tab \tab \tab \tab \tab the method recommendation \cr
-  \code{results$plots} \tab \tab \tab \tab \tab scatter plots of the data \cr
+  \code{results$plotsIndependents} \tab \tab \tab \tab \tab scatter plots of the dependent variable and the independent variables \cr
+  \code{results$plotsControls} \tab \tab \tab \tab \tab scatter plots of the dependent variable and the control variables \cr
 }
 }
 \description{

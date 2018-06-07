@@ -44,7 +44,8 @@ correlationalResults <- if (requireNamespace('jmvcore')) R6::R6Class(
     inherit = jmvcore::Group,
     active = list(
         advice = function() private$.items[["advice"]],
-        plots = function() private$.items[["plots"]]),
+        plotsIndependents = function() private$.items[["plotsIndependents"]],
+        plotsControls = function() private$.items[["plotsControls"]]),
     private = list(),
     public=list(
         initialize=function(options) {
@@ -59,9 +60,20 @@ correlationalResults <- if (requireNamespace('jmvcore')) R6::R6Class(
                 visible="(text)"))
             self$add(jmvcore::Array$new(
                 options=options,
-                name="plots",
-                title="Scatter Plots of Bivariate Relationships",
+                name="plotsIndependents",
+                title="Scatter Plots of Bivariate Relationships - Independent Variables",
                 items="(independents)",
+                template=jmvcore::Image$new(
+                    options=options,
+                    requiresData=TRUE,
+                    width=400,
+                    height=300,
+                    renderFun=".plot")))
+            self$add(jmvcore::Array$new(
+                options=options,
+                name="plotsControls",
+                title="Scatter Plots of Bivariate Relationships - Control Variables",
+                items="(controls)",
                 template=jmvcore::Image$new(
                     options=options,
                     requiresData=TRUE,
@@ -115,7 +127,8 @@ correlationalBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #' @return A results object containing:
 #' \tabular{llllll}{
 #'   \code{results$advice} \tab \tab \tab \tab \tab the method recommendation \cr
-#'   \code{results$plots} \tab \tab \tab \tab \tab scatter plots of the data \cr
+#'   \code{results$plotsIndependents} \tab \tab \tab \tab \tab scatter plots of the dependent variable and the independent variables \cr
+#'   \code{results$plotsControls} \tab \tab \tab \tab \tab scatter plots of the dependent variable and the control variables \cr
 #' }
 #'
 #' @export

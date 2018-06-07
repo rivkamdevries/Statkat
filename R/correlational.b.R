@@ -748,7 +748,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
         },
         .plot=function(image, theme, ggtheme, ...) {
-          if (is.null(self$options$dep) || is.null(self$options$independents)) {
+          if (is.null(self$options$dep)) {
             return (FALSE)
           }
           

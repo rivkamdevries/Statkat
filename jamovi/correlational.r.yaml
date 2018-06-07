@@ -10,11 +10,23 @@ items:
       description: the method recommendation
       visible: (text)
 
-    - name: plots
-      title: Scatter Plots of Bivariate Relationships
+    - name: plotsIndependents
+      title: Scatter Plots of Bivariate Relationships - Independent Variables
       type: Array
-      description: scatter plots of the data
+      description: scatter plots of the dependent variable and the independent variables 
       items: (independents)
+      template:
+        requiresData: true
+        type: Image
+        width:  400
+        height: 300
+        renderFun: .plot
+    
+    - name: plotsControls
+      title: Scatter Plots of Bivariate Relationships - Control Variables
+      type: Array
+      description: scatter plots of the dependent variable and the control variables 
+      items: (controls)
       template:
         requiresData: true
         type: Image
