@@ -3,7 +3,7 @@ name:  repeated
 title: Repeated Measurements
 menuGroup: Statkat
 version: '1.0.0'
-jas: '1.1'
+jas: '1.2'
 
 description:
     main: Provides a recommended statistical method given the measurement level of your data. Appropriate for repeated measurements.
