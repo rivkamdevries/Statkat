@@ -4,7 +4,7 @@
 \alias{correlational}
 \title{Correlational Research}
 \usage{
-correlational(data, dep, independents, controls)
+correlational(data, dep, independents, controls = NULL)
 }
 \arguments{
 \item{data}{the data as a data frame, with variables encoded as numeric

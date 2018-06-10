@@ -43,6 +43,7 @@ options:
     - name: controls
       title: Control Variables
       type: Variables
+      default:
       description:
           R: a string or vector of strings naming the control variable(s) from `data`
 

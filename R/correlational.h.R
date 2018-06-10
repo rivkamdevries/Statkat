@@ -24,7 +24,8 @@ correlationalOptions <- if (requireNamespace('jmvcore')) R6::R6Class(
                 independents)
             private$..controls <- jmvcore::OptionVariables$new(
                 "controls",
-                controls)
+                controls,
+                default=NULL)
 
             self$.addOption(private$..dep)
             self$.addOption(private$..independents)
@@ -136,7 +137,7 @@ correlational <- function(
     data,
     dep,
     independents,
-    controls) {
+    controls = NULL) {
 
     if ( ! requireNamespace('jmvcore'))
         stop('correlational requires jmvcore to be installed (restart may be required)')
