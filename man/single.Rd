@@ -27,7 +27,7 @@ your data. Appropriate when you are interested in a single variable.
 \examples{
 exampleData <- data.frame(x1 = rnorm(20),
                           x2 = as.factor(c(rep(1, 10), rep(2, 10))),
-                          x3 = as.ordered(rep(1, 10), rep(2, 5), rep(3, 5)))
+                          x3 = as.ordered(c(rep(1, 10), rep(2, 5), rep(3, 5))))
 
 single(exampleData, variable = 'x1')
 single(exampleData, variable = 'x2')

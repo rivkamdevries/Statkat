@@ -81,9 +81,9 @@ repeatedBase <- if (requireNamespace('jmvcore')) R6::R6Class(
 #'                           x2 = rnorm(20),
 #'                           x3 = rnorm(20),
 #'                           x4 = as.factor(c(rep(1, 10), rep(2, 10))),
-#'                           x5 = as.factor(rep(1, 5), rep(2, 5), rep(3, 10)),
-#'                           x6 = as.ordered(rep(1, 5), rep(2, 5), rep(3, 10)),
-#'                           x7 = as.ordered(rep(1, 10), rep(2, 5), rep(3, 5)))
+#'                           x5 = as.factor(c(rep(1, 5), rep(2, 5), rep(3, 10))),
+#'                           x6 = as.ordered(c(rep(1, 5), rep(2, 5), rep(3, 10))),
+#'                           x7 = as.ordered(c(rep(1, 10), rep(2, 5), rep(3, 5))))
 #'
 #' repeated(exampleData, variables = c('x1', 'x2', 'x3'))
 #' repeated(exampleData, variables = c('x4', 'x5'))
