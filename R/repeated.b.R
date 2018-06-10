@@ -75,7 +75,7 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 if ((measurementLevel[1] == "nominal" || measurementLevel[1] == "ordinal") && numberUniqueValues == 2) {
                     advice <- "You have entered two related dichotomous variables. Hence , 
                                <a href= 'https://statkat.com/stattest.php?&t=39' target='_blank'>McNemar's test</a>
-                                 seems to be a good option for you! In order to perform this test, go to:
+                                 seems to be a good option for you! In order to run this test in Jamovi, go to:
                                  Frequencies > Paired Samples - McNemar test
                                 <ul>
                                 <li>Drop one of the two paired variables in the box below Rows and the other paired variable in the box below Columns</li>
@@ -87,7 +87,7 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                <a href= 'https://statkat.com/stattest.php?&t=39' target='_blank'>sign test</a>
                                  seems to be a good option for you! Jamovi does not have a specific option for the sign test.
                                 However, you can do the <a href= 'https://statkat.com/stattest.php?&t=33' target='_blank'>Friedman test</a> instead. The <i>p</i> value resulting from this Friedman test
-                                is equivalent to the two sided <i>p</i> value that would have resulted from the sign test. Go to:
+                                is equivalent to the two sided <i>p</i> value that would have resulted from the sign test. In order to run the Friedman test in Jamovi, go to:
                                 <br><br>
                                 ANOVA > Repeated Measures ANOVA - Friedman
                                 <ul>
@@ -105,7 +105,7 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 else if (measurementLevel[1] == "numeric") {
                     advice <- "You have entered two related numeric variables. Hence, the
                                <a href= 'https://statkat.com/stattest.php?&t=7' target='_blank'>paired sample <i>t</i> test</a>
-                                 seems to be a good option for you! In order to perform this test, go to:
+                                 seems to be a good option for you! In order to run this test in Jamovi, go to:
                                 <br><br>
                                T-Tests > Paired Samples T-Test
                                 <ul>
@@ -124,7 +124,7 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                <a href= 'https://statkat.com/stattest.php?&t=40' target='_blank'>Cochran's <i>Q</i> test</a>
                                  seems to be a good option for you! Jamovi does not have a specific option for Cochran's <i>Q</i> test.
                                 However, you can do the <a href= 'https://statkat.com/stattest.php?&t=33' target='_blank'>Friedman test</a> instead. The <i>p</i> value resulting from this Friedman test
-                                is equivalent to the <i>p</i> value that would have resulted from the Cochran's <i>Q</i> test. Go to:
+                                is equivalent to the <i>p</i> value that would have resulted from the Cochran's <i>Q</i> test. In order to run the Friedman test in Jamovi, go to:
                                 <br><br>
                                 ANOVA > Repeated Measures ANOVA - Friedman
                                 <ul>
@@ -135,7 +135,7 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 else if (measurementLevel[1] == "ordinal") {
                     advice <- "You have entered several related ordinal variables. Hence, the
                                <a href= 'https://statkat.com/stattest.php?&t=33' target='_blank'>Friedman test</a>
-                                seems to be a good option for you! In order to perform this test, go to:
+                                seems to be a good option for you! In order to run this test in Jamovi, go to:
                                 <br><br>
                                 ANOVA > Repeated Measures ANOVA - Friedman
                                 <ul>
@@ -150,7 +150,7 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 }
                 else if (measurementLevel[1] == "numeric") {
                     advice <- "You have entered several related numeric variables. Hence, a repeated measures ANOVA
-                                seems to be a good option for you! In order to perform this test, go to:
+                                seems to be a good option for you! In order to run this analysis in Jamovi, go to:
                                 <br><br>
                                 ANOVA > Repeated Measures ANOVA
                                 <ul>

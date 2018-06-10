@@ -47,7 +47,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
             if (is.factor(var) && numberUniqueValues == 2) {
                 advice <- "You have entered a dichotomous variable. Hence, the Binomial test for the population proportion may be a good option for you!
-                           In order to perform this test, go to:
+                           In order to run this test in Jamovi, go to:
                            <br><br>
                            Frequencies > 2 Outcomes - Binomial test
                            <ul>
@@ -59,7 +59,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             else if (is.ordered(var)) {
                 advice <- "You have entered a variable of ordinal measurement level. Hence, 
                            the <a href= 'https://statkat.com/stattest.php?&t=42' target='_blank'>Wilcoxon signed-rank test</a> for the population median
-                           may be a good option for you! In order to perform this test, go to:
+                           may be a good option for you! In order to run this test in Jamovi, go to:
                            <br><br>
                            T-Tests > One Sample T-Test
                              <ul>
@@ -72,7 +72,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             else if (is.factor(var)) {
                 advice <- "You have entered a variable of nominal measurement level. Hence, 
                            the  <a href= 'https://statkat.com/stattest.php?&t=3' target='_blank'>goodness of fit test</a>
-                           may be a good option for you! In order to perform this test, go to:
+                           may be a good option for you! In order to run this test in Jamovi, go to:
                            <br><br>
                            Frequencies > N Outcomes - &Chi;<sup>2</sup> Goodness of fit
                            <ul>
@@ -85,7 +85,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             else if (is.numeric(var)) {
                 advice <- "You have entered a numeric variable. Hence, 
                            the  <a href= 'https://statkat.com/stattest.php?&t=6' target='_blank'>one sample <i>t</i> test</a> for the population mean
-                may be a good option for you! In order to perform this test, go to:
+                may be a good option for you! In order to run this test in Jamovi, go to:
                 <br><br>
                 T-Tests > One Sample T-Test
                 <ul>
