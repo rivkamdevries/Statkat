@@ -331,7 +331,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     <li>Drop your dependent (dichotomous) variable in the box below Dependent Variable and your independent (numeric) variable in the box below Covariates
                                     </li>
                                     </ul>
-                                    If you would flip variable 1 and variable 2, you could also do a <a href= 'https://statkat.com/stattest.php?&t=10&t2=9' target='_blank'>two sample <i>t</i> test</a>
+                                    If you would flip variable 1 and variable 2, you could also perform a <a href= 'https://statkat.com/stattest.php?&t=10&t2=9' target='_blank'>two sample <i>t</i> test</a>
                                     for the difference between two population means, or the non-parametric <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>.
                                     <br><br>
                                     Click on the links to learn more about these methods!"
@@ -356,7 +356,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     the Spearman correlation is a much easier option than ordinal logistic regression. Also, ordinal logistic regression
                                     is currently not available in Jamovi, so you would need to find other software to perform the analysis (e.g., R or SPSS).
                                     <br><br>
-                                    Finally, if you would flip variable 1 and variable 2, you could also do a <a href= 'https://statkat.com/stattest.php?&t=11' target='_blank'>one way ANOVA</a>, which is
+                                    Finally, if you would flip variable 1 and variable 2, you could also perform a <a href= 'https://statkat.com/stattest.php?&t=11' target='_blank'>one way ANOVA</a>, which is
                                     a test for the difference between several population means. Your numeric variable would be the dependent
                                     variable and your ordinal variable would be the independent variable (grouping factor). The disadvantage of the one way ANOVA is that it will not take the ranked nature of the ordinal
                                     independent variable into account. That is, it will treat the ordinal independent variable as a nominal variable.
@@ -373,7 +373,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     <li>Drop your dependent (nominal) variable in the box below Dependent Variable and your independent (numeric) variable in the box below Covariates
                                     </li>
                                     </ul>
-                                    If you would flip variable 1 and variable 2, you could also do a <a href= 'https://statkat.com/stattest.php?&t=11' target='_blank'>one way ANOVA</a>,
+                                    If you would flip variable 1 and variable 2, you could also perform a <a href= 'https://statkat.com/stattest.php?&t=11' target='_blank'>one way ANOVA</a>,
                                     which is a test for the difference between several population means. Your numeric variable would be the dependent
                                     variable and your nominal variable would be the independent variable (grouping factor).
                                     Click on the link to learn more about this method!"
@@ -382,7 +382,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
                 else if (is.numeric(dependent) && is.numeric(independent)) {
                     advice <- "You have entered a numeric variable for Variable 1 / Dependent Variable and a numeric variable for 
-                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Pearson correlation coefficient</a>,
+                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=19' target='_blank'>Pearson correlation coefficient</a>,
                                     which is a measure for the strength of the linear relationship between two variables,
                                     seems to be a good option for you! In order to run this analysis in Jamovi, go to:
                                     <br><br>
@@ -423,7 +423,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                                 <li>Drop your dependent variable in the box below Dependent Variable</li>
                                                 <li>Drop your independent variables in the box below Covariates. Independent variables of nominal or ordinal measurement level that consist of more than two groups
                                                 should be transformed into code variables before they are included in the analysis. Independent variables of nominal or ordinal measurement
-                                                level that consist of two groups can be transformed into code variables, but they don't need to be. In Jamovi, instead of transforming your categorical
+                                                level that consist of two groups can be transformed into code variables, but they don't need to be (they actually <i>are</i> code variables already, but you may like to change the coding). In Jamovi, instead of transforming your categorical
                                                 independent variables into code variables yourself, you can also put the untransformed categorical independent variables in the
                                                 box below Factors. Jamovi will then make the code variables for you 'behind the scenes'</li>
                                                </ul>"
@@ -454,7 +454,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         "Click on the link to learn more about this method!")
                     }
                     else {
-                        advice <- paste("You have entered a dichotomous dependent variable and several independent variables. 
+                        advice <- paste("You have entered a dichotomous dependent variable and several numeric independent variables. 
                                          Hence, <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to run this analysis in Jamovi, go to:
                                         <br><br>
@@ -486,7 +486,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         stepsNoControlsCategorical)
                     }
                     else {
-                        advice <- paste("You have entered a nominal dependent variable and several independent variables. 
+                        advice <- paste("You have entered a nominal dependent variable and several numeric independent variables. 
                                          Hence, multinomial logistic regression analysis
                                         seems to be a good option for you! In order to run this analysis in Jamovi, go to:
                                         <br><br>
@@ -577,7 +577,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                                     <li>Drop your dependent variable in the box below Dependent Variable</li>
                                                     <li>Drop your independent variables and control variables in the box below Covariates. Independent/control variables of nominal or ordinal measurement level that consist of more than two groups
                                                     should be transformed into code variables before they are included in the analysis. Independent/control variables of nominal or ordinal measurement
-                                                    level that consist of two groups can be transformed into code variables, but they don't need to be. In Jamovi, instead of transforming your categorical
+                                                    level that consist of two groups can be transformed into code variables, but they don't need to be 
+                                                    (they actually <i>are</i> code variables already, but you may like to change the coding). In Jamovi, instead of transforming your categorical
                                                     independent/control variables into code variables yourself, you can also put the untransformed categorical variables in the
                                                     box below Factors. Jamovi will then make the code variables for you 'behind the scenes'</li>
                                                  </ul>"
@@ -588,7 +589,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                                  </ul>"
 
                 if (is.factor(dependent) && numberUniqueValuesDependent == 2) {
-                    if (any(independentNeedsDummy) || any(controlNeedsDummy) && !any(independentDichotomous) && !any(controlDichotomous)) {
+                    if ((any(independentNeedsDummy) || any(controlNeedsDummy)) && !any(independentDichotomous) && !any(controlDichotomous)) {
                         advice <- paste("You have entered a dichotomous dependent variable, one or more independent variables, and one or more control variables. Hence, 
                                         <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to run this analysis in Jamovi, go to:
@@ -607,7 +608,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         "Click on the link to learn more about this method!")
                     }
                     else {
-                        advice <- paste("You have entered a dichotomous dependent variable, one or more independent variables, and one or more control variables. Hence, 
+                        advice <- paste("You have entered a dichotomous dependent variable, one or more numeric independent variables, and one or more numeric control variables. Hence, 
                                         <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to run this analysis in Jamovi, go to:
                                         <br><br>
@@ -624,7 +625,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 }
 
                 else if (is.factor(dependent)) {
-                    if (any(independentNeedsDummy) || any(controlNeedsDummy) && !any(independentDichotomous) && !any(controlDichotomous)) {
+                    if ((any(independentNeedsDummy) || any(controlNeedsDummy)) && !any(independentDichotomous) && !any(controlDichotomous)) {
                         advice <- paste("You have entered a nominal dependent variable, one or more independent variables, and one or more control variables. 
                                    Hence, multinomial logistic regression
                                    seems to be a good option for you! In order to run this analysis in Jamovi, go to:
@@ -641,7 +642,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                       stepsWithControlsCategorical)
                     }
                     else {
-                        advice <- paste("You have entered a nominal dependent variable, one or more independent variables, and one or more control variables. 
+                        advice <- paste("You have entered a nominal dependent variable, one or more numeric independent variables, and one or more numeric control variables. 
                                         Hence, multinomial logistic regression
                                         seems to be a good option for you! In order to run this analysis in Jamovi, go to:
                                         <br><br>
@@ -705,10 +706,10 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <li>Drop your numeric control variables in the box below Covariates</li>
                                         </ul>"
                     }
-                    else if (any(independentNeedsDummy) || any(controlNeedsDummy) && !any(independentDichotomous) && !any(controlDichotomous)) {
+                    else if ((any(independentNeedsDummy) || any(controlNeedsDummy)) && !any(independentDichotomous) && !any(controlDichotomous)) {
                         advice <- paste("You have entered a numeric dependent variable, one or more independent variables, and one or more control variables.
                                         At least some of your independent variables are numeric.   
-                                        Hence, a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
+                                        Hence, a <a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
                                           seems to be a good option for you! In order to run this analysis in Jamovi, go to:
                                           <br><br>
                                           Regression > Linear Regression",

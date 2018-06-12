@@ -62,7 +62,7 @@ correlationalResults <- if (requireNamespace('jmvcore')) R6::R6Class(
             self$add(jmvcore::Array$new(
                 options=options,
                 name="plotsIndependents",
-                title="Scatter Plots of Bivariate Relationships - Independent Variables",
+                title="Scatter Plots of Bivariate Relationships - Dependent/Independent Variables",
                 items="(independents)",
                 template=jmvcore::Image$new(
                     options=options,
@@ -73,7 +73,7 @@ correlationalResults <- if (requireNamespace('jmvcore')) R6::R6Class(
             self$add(jmvcore::Array$new(
                 options=options,
                 name="plotsControls",
-                title="Scatter Plots of Bivariate Relationships - Control Variables",
+                title="Scatter Plots of Bivariate Relationships - Dependent/Control Variables",
                 items="(controls)",
                 template=jmvcore::Image$new(
                     options=options,

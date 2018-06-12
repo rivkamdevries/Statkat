@@ -11,7 +11,7 @@ items:
       visible: (text)
 
     - name: plotsIndependents
-      title: Scatter Plots of Bivariate Relationships - Independent Variables
+      title: Scatter Plots of Bivariate Relationships - Dependent/Independent Variables
       type: Array
       description: scatter plots of the dependent variable and the independent variables 
       items: (independents)
@@ -23,7 +23,7 @@ items:
         renderFun: .plot
     
     - name: plotsControls
-      title: Scatter Plots of Bivariate Relationships - Control Variables
+      title: Scatter Plots of Bivariate Relationships - Dependent/Control Variables
       type: Array
       description: scatter plots of the dependent variable and the control variables 
       items: (controls)

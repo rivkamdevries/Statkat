@@ -84,16 +84,16 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 }
                 else if (measurementLevel[1] == "ordinal") {
                     advice <- "You have entered two related ordinal variables. Hence,  the
-                               <a href= 'https://statkat.com/stattest.php?&t=39' target='_blank'>sign test</a>
+                               <a href= 'https://statkat.com/stattest.php?&t=34' target='_blank'>sign test</a>
                                  seems to be a good option for you! Jamovi does not have a specific option for the sign test.
-                                However, you can do the <a href= 'https://statkat.com/stattest.php?&t=33' target='_blank'>Friedman test</a> instead. The <i>p</i> value resulting from this Friedman test
+                                However, you can use the <a href= 'https://statkat.com/stattest.php?&t=33' target='_blank'>Friedman test</a> instead. The <i>p</i> value resulting from this Friedman test
                                 is equivalent to the two sided <i>p</i> value that would have resulted from the sign test. In order to run the Friedman test in Jamovi, go to:
                                 <br><br>
                                 ANOVA > Repeated Measures ANOVA - Friedman
                                 <ul>
                                 <li>Drop the two paired variables in the box below Measures</li>
                                 </ul>
-                                Click on the link to learn more about this test!"
+                                Click on the links to learn more about these test!"
                 }
                 else if (measurementLevel[1] == "nominal") {
                     advice <- "You have entered two related nominal variables. Hence, the
@@ -123,14 +123,14 @@ repeatedClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     advice <- "You have entered several related dichotomous variables. Hence, 
                                <a href= 'https://statkat.com/stattest.php?&t=40' target='_blank'>Cochran's <i>Q</i> test</a>
                                  seems to be a good option for you! Jamovi does not have a specific option for Cochran's <i>Q</i> test.
-                                However, you can do the <a href= 'https://statkat.com/stattest.php?&t=33' target='_blank'>Friedman test</a> instead. The <i>p</i> value resulting from this Friedman test
+                                However, you can use the <a href= 'https://statkat.com/stattest.php?&t=33' target='_blank'>Friedman test</a> instead. The <i>p</i> value resulting from this Friedman test
                                 is equivalent to the <i>p</i> value that would have resulted from the Cochran's <i>Q</i> test. In order to run the Friedman test in Jamovi, go to:
                                 <br><br>
                                 ANOVA > Repeated Measures ANOVA - Friedman
                                 <ul>
                                 <li>Drop the related variables in the box below Measures</li>
                                 </ul>
-                                Click on the link to learn more about this test!"
+                                Click on the links to learn more about these tests!"
                 }
                 else if (measurementLevel[1] == "ordinal") {
                     advice <- "You have entered several related ordinal variables. Hence, the

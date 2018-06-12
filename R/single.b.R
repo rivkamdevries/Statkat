@@ -46,7 +46,8 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
 
             if (is.factor(var) && numberUniqueValues == 2) {
-                advice <- "You have entered a dichotomous variable. Hence, the Binomial test for the population proportion may be a good option for you!
+                advice <- "You have entered a dichotomous variable. Hence, the Binomial test for the population proportion of 'successes' may be a good option for you!
+                           It tests whether the population proportion of successes, or the true probability of a success, is different from a certain hypothesized value, denoted &pi;<sub>0</sub>.
                            In order to run this test in Jamovi, go to:
                            <br><br>
                            Frequencies > 2 Outcomes - Binomial test
@@ -65,7 +66,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                              <ul>
                                 <li>Drop your variable in the box below Dependent Variables</li>
                                 <li>Under Tests, select Wilcoxon rank</li>
-                                <li>Under Hypothesis, fill in the value for $m_0$ in the box next to Test Value, and select your alternative hypothesis</li>
+                                <li>Under Hypothesis, fill in the value for <i>m</i><sub>0</sub> in the box next to Test Value, and select your alternative hypothesis</li>
                             </ul>
                             Click on the link to learn more about this test!"
             }
@@ -78,7 +79,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                            <ul>
                               <li>Drop your nominal variable in the box below Variable</li>
                               <li>Click on Expected Proportions and fill in the population proportions / probabilities according to your null hypothesis in the boxes below Ratio.
-                                  If your null hypothesis states that they are all equal, you can leave the ratios equal to the default values (1)</li>
+                                  If your null hypothesis states that they are all equal, you can leave the ratios equal to the default values (i.e., equal to 1)</li>
                            </ul>
                            Click on the link to learn more about this test!"
             }
