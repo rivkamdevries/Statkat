@@ -10,7 +10,8 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 advice <- "Welcome to Statkat!
                           <br><br>
                           This tool will help you to find an appropriate statistical method given the measurement level of your data.
-                          Make sure you have correctly defined the measurement levels of your variables on the Data tab.
+                          Make sure you have correctly defined the measurement levels of your variables on the Data tab. You can change the measurement level
+                          of a variable via the Setup button on the Data tab, or by double clicking on a column header of interest. 
                           <br><br>
                           To get started, drop a variable in the white box below Variable. Our tool will then come up with a statistical method that may be appropriate for your data!
                           <br><br>
@@ -117,7 +118,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
           plotData <- data.frame(x = runif(N, -.03, .03), y = var)
 
           plot <- ggplot(plotData, aes(x = x, y = y)) +
-            geom_point() +
+            geom_point(alpha = 0.2) +
             xlim(-1, 1) +
             ggtheme +
             theme(axis.title.x = element_blank(),

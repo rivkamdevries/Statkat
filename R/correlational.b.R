@@ -14,7 +14,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 advice <- "Welcome to Statkat!
                           <br><br>
                           This tool will help you to find an appropriate statistical method given the measurement level of your data.
-                          Make sure you have correctly defined the measurement levels of your variables on the Data tab.
+                          Make sure you have correctly defined the measurement levels of your variables on the Data tab. You can change the measurement level
+                          of a variable via the Setup button on the Data tab, or by double clicking on a column header of interest. 
                           <br><br>
                           You have selected the Correlational Research option. This is the place to be if you are interested in
                           <ul>
@@ -790,8 +791,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
           plotData <- data.frame(x = x, y = y)
           
           plot <- ggplot(plotData, aes(x = x, y = y)) + 
-            geom_jitter(width = widthJitter, height = heightJitter) + 
-            ggtheme + 
+            geom_jitter(width = widthJitter, height = heightJitter, alpha = 0.2) + 
+            ggtheme +
             theme(panel.grid.major = element_blank(), 
                   panel.grid.minor = element_blank(),
                   panel.background = element_blank(), 
