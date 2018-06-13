@@ -33,6 +33,15 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                           power. In observational studies, control variables are often included mainly to equate subjects on the control variables. This
                           prevents the control variables from confounding the relationships between the independent variables and the dependent variable.
                           <br><br>
+                          If your research question does not make a clear distinction between an independent variable and a dependent variable, 
+                          the decision of which variable to define as Variable 1/Dependent Variable and which as Variable 2/Independent Variables 
+                          can be arbitrary. But doesn't this decision affect the recommended method? Well, in some cases it does affect the primary 
+                          method recommendation, but if a simpler method can be performed by flipping the two variables, this is usually mentioned. 
+                          It is then up to you which of the recommended methods you prefer. It is important to keep in mind here that none of the 
+                          correlational statistical techniques can say anything about causality anyway (not even a method like regression analysis), 
+                          so even if you do make a distinction between an independent and dependent variable, the statistical method will only say 
+                          something about association, not causation.
+                          <br><br>
                           Note:<br>
                           Our advice is based on the measurement level of your data and on the number of variables entered. There can be details related to your data, task, or assignment 
                           that may render the advice moot. Always check the assumptions made by the statistical method before interpreting the results. 
