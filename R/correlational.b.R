@@ -424,7 +424,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                                 <li>Drop your dependent variable in the box below Dependent Variable</li>
                                                 <li>Drop your independent variables in the box below Covariates. Independent variables of nominal or ordinal measurement level that consist of more than two groups
                                                 should be transformed into code variables before they are included in the analysis. Independent variables of nominal or ordinal measurement
-                                                level that consist of two groups can be transformed into code variables, but they don't need to be (they actually <i>are</i> code variables already, but you may like to change the coding). In Jamovi, instead of transforming your categorical
+                                                level that consist of two groups can be transformed into code variables, but they don't need to be, as long as numbers 
+                                                are used to indicate group membership, not letters (these dichotomous variables actually <i>are</i> code variables already, but you may like to change the coding). In Jamovi, instead of transforming your categorical
                                                 independent variables into code variables yourself, you can also put the untransformed categorical independent variables in the
                                                 box below Factors. Jamovi will then make the code variables for you 'behind the scenes'</li>
                                                </ul>"
@@ -578,8 +579,9 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                                     <li>Drop your dependent variable in the box below Dependent Variable</li>
                                                     <li>Drop your independent variables and control variables in the box below Covariates. Independent/control variables of nominal or ordinal measurement level that consist of more than two groups
                                                     should be transformed into code variables before they are included in the analysis. Independent/control variables of nominal or ordinal measurement
-                                                    level that consist of two groups can be transformed into code variables, but they don't need to be 
-                                                    (they actually <i>are</i> code variables already, but you may like to change the coding). In Jamovi, instead of transforming your categorical
+                                                    level that consist of two groups can be transformed into code variables, but they don't need to be, as long as numbers 
+                                                are used to indicate group membership, not letters 
+                                                    (these dichotomous variables actually <i>are</i> code variables already, but you may like to change the coding). In Jamovi, instead of transforming your categorical
                                                     independent/control variables into code variables yourself, you can also put the untransformed categorical variables in the
                                                     box below Factors. Jamovi will then make the code variables for you 'behind the scenes'</li>
                                                  </ul>"
