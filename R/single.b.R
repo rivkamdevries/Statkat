@@ -115,7 +115,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
           var <- self$data[[self$options$variable]]
           N <- length(var)
 
-          plotData <- data.frame(x = runif(N, -.03, .03), y = var)
+          plotData <- data.frame(x = runif(N, -.5, .5), y = var)
 
           plot <- ggplot(plotData, aes(x = x, y = y)) +
             geom_point(alpha = 0.2) +
