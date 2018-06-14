@@ -342,7 +342,9 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     </li>
                                     </ul>
                                     If you would flip variable 1 and variable 2, you could also perform a <a href= 'https://statkat.com/stattest.php?&t=10&t2=9' target='_blank'>two sample <i>t</i> test</a>
-                                    for the difference between two population means, or the non-parametric <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>.
+                                    for the difference between two population means, or the non-parametric <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>. 
+                                    Your numeric variable would be the dependent
+                                    variable and your dichotomous variable would be the independent variable (grouping factor).
                                     <br><br>
                                     Click on the links to learn more about these methods!"
                 }
@@ -384,9 +386,10 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     </li>
                                     </ul>
                                     If you would flip variable 1 and variable 2, you could also perform a <a href= 'https://statkat.com/stattest.php?&t=11' target='_blank'>one way ANOVA</a>,
-                                    which is a test for the difference between several population means. Your numeric variable would be the dependent
+                                    which is a test for the difference between several population means, 
+                                    or the non-parametric <a href= 'https://statkat.com/stattest.php?&t=17' target='_blank'>Kruskal-Wallis test</a>. Your numeric variable would be the dependent
                                     variable and your nominal variable would be the independent variable (grouping factor).
-                                    Click on the link to learn more about this method!"
+                                    Click on the links to learn more about these methods!"
                 }
 
 
