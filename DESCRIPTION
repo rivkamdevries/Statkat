@@ -1,6 +1,6 @@
 Package: Statkat
 Type: Package
-Title: Statistical Method Selector
+Title: Statkat - Method Selection Tool
 Version: 0.0.0
 Author: Rivka M. de Vries
 Maintainer: Rivka M. de Vries <rivkamdevries@gmail.com>

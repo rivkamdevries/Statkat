@@ -1,16 +1,16 @@
 ---
-title: What the Package Does (Title Case)
+title: Statkat - Method Selection Tool
 name: Statkat
-version: 0.0.0
+version: 1.0.0
 jms: '1.0'
 authors:
-  - Who wrote it
-maintainer: The package maintainer <yourself@somewhere.net>
-date: '1970-01-01'
+  - Rivka M. de Vries
+maintainer: Rivka M. de Vries <rivkamdevries@gmail.com>
+date: '2018-06-14'
 type: R
 description: >-
-  More about what it does (maybe more than one line) Use four spaces when
-  indenting paragraphs within the Description.
+  This tool will help you to find an appropriate statistical method given your
+  research question and the measurement level of your data.
 analyses:
   - title: Single Variable
     name: single
