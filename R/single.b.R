@@ -47,7 +47,9 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
 
             if (is.factor(var) && numberUniqueValues == 2) {
-                advice <- "You have entered a dichotomous variable. Hence, the Binomial test for the population proportion of 'successes' may be a good option for you!
+                advice <- "You have entered a dichotomous variable. Hence, the 
+                          <a href= 'https://statkat.com/stattest.php?&t=44' target='_blank'>Binomial test</a> for the population proportion of 'successes' 
+                          may be a good option for you!
                            It tests whether the population proportion of successes, or the true probability of a success, is different from a certain hypothesized value, denoted &pi;<sub>0</sub>.
                            In order to run this test in jamovi, go to:
                            <br><br>
@@ -56,7 +58,8 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                             <li>Drop your dichotomous variable in the white box at the right</li>
                             <li>Fill in the value for &pi;<sub>0</sub> in the box next to Test value</li>
                             <li>Under Hypothesis, select your alternative hypothesis</li>
-                           </ul>"
+                           </ul>
+                           Click on the link to learn more about this test!"
             }
             else if (is.ordered(var)) {
                 advice <- "You have entered a variable of ordinal measurement level. Hence, 
