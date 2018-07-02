@@ -1,7 +1,7 @@
 Package: Statkat
 Type: Package
 Title: Statkat - Method Selection Tool
-Version: 0.0.0
+Version: 0.0.1
 Author: Rivka M. de Vries
 Maintainer: Rivka M. de Vries <rivkamdevries@gmail.com>
 Description: This tool will help you to find an appropriate statistical method given your research question and the measurement level of your data.
