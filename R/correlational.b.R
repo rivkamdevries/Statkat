@@ -90,7 +90,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 if (is.factor(dependent) && is.factor(independent) && numberUniqueValuesDependent == 2 && numberUniqueValuesIndependent == 2) {
                     advice <- "You have entered a dichotomous variable for Variable 1 / Dependent Variable and a dichotomous variable for 
                                 Variable 2 / Independent Variables. Hence,
-                                the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
+                                the <a href= 'https://statkat.com/stattest.php?&t=4&ref=jam' target='_blank'>chi-squared test of association</a>
                                  seems to be a good option for you! In order to run this test in jamovi, go to:
                                  <br><br>
                                  Frequencies > Independent Samples - &chi;<sup>2</sup> test of association
@@ -106,7 +106,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 else if (is.ordered(dependent) && is.ordered(independent)) {
                     if (numberUniqueValuesDependent > 2 && numberUniqueValuesIndependent == 2) {
                         advice <- "You have entered an ordinal variable for Variable 1 / Dependent Variable and a dichotomous variable for 
-                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>
+                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=14&ref=jam' target='_blank'>Mann-Whitney U test</a>
                                         for the difference between two groups on an ordinal variable
                                         seems to be a good option for you! In order to run this test in jamovi, go to:
                                         <br><br>
@@ -117,16 +117,16 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                             <li>Under Tests, select Mann-Whitney U</li>
                                             <li>Under Hypothesis, select your alternative hypothesis</li>
                                         </ul>
-                                        Alternative options would be <a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Spearman's rank correlation coefficient</a>,
+                                        Alternative options would be <a href= 'https://statkat.com/stattest.php?&t=18&ref=jam' target='_blank'>Spearman's rank correlation coefficient</a>,
                                         which is a measure for the strength of the monotonic relationship between two variables, or the
-                                        <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>.
+                                        <a href= 'https://statkat.com/stattest.php?&t=4&ref=jam' target='_blank'>chi-squared test of association</a>.
                                         Note that the chi-squared test treats both variables as nominal, and therefore does not take the ranked nature of the ordinal variables
                                         into account.<br><br>
                                         Click on the links to learn more about these methods!"
                     }
                     else if (numberUniqueValuesDependent == 2 && numberUniqueValuesIndependent > 2) {
                         advice <- "You have entered a dichotomous variable for Variable 1 / Dependent Variable and an ordinal variable for 
-                                    Variable 2 / Independent Variables. Hence, <a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Spearman's rank correlation coefficient</a>,
+                                    Variable 2 / Independent Variables. Hence, <a href= 'https://statkat.com/stattest.php?&t=18&ref=jam' target='_blank'>Spearman's rank correlation coefficient</a>,
                                         which is a measure for the strength of the monotonic relationship between two variables,
                                         seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                         <br><br>
@@ -138,17 +138,17 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <li>Under Hypothesis, select your alternative hypothesis</li>
                                         </ul>
                                         An alternative option would be the
-                                        <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>.
+                                        <a href= 'https://statkat.com/stattest.php?&t=4&ref=jam' target='_blank'>chi-squared test of association</a>.
                                         Note, however, that the chi-squared test treats both variables as nominal, and therefore does not take the ranked nature of the ordinal variables
                                         into account.<br><br>
-                                        If you would flip variable 1 and variable 2, you could also use the <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>
+                                        If you would flip variable 1 and variable 2, you could also use the <a href= 'https://statkat.com/stattest.php?&t=14&ref=jam' target='_blank'>Mann-Whitney U test</a>
                                         for the difference between two groups on an ordinal variable.<br><br>
                                         Click on the links to learn more about these methods!"
                     }
                     else {
                         advice <- "You have entered an ordinal variable for Variable 1 / Dependent Variable and an ordinal variable for 
                                     Variable 2 / Independent Variables. Hence,
-                                        <a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Spearman's rank correlation coefficient</a>,
+                                        <a href= 'https://statkat.com/stattest.php?&t=18&ref=jam' target='_blank'>Spearman's rank correlation coefficient</a>,
                                         which is a measure for the strength of the monotonic relationship between two variables,
                                         seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                         <br><br>
@@ -160,8 +160,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <li>Under Hypothesis, select your alternative hypothesis</li>
                                         </ul>
                                         Alternative options would be the
-                                        <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a> or the
-                                        <a href= 'https://statkat.com/stattest.php?&t=17' target='_blank'>Kruskal-Wallis test</a> for the difference between
+                                        <a href= 'https://statkat.com/stattest.php?&t=4&ref=jam' target='_blank'>chi-squared test of association</a> or the
+                                        <a href= 'https://statkat.com/stattest.php?&t=17&ref=jam' target='_blank'>Kruskal-Wallis test</a> for the difference between
                                         several groups on an ordinal variable.
                                         Note, however, that the chi-squared test treats both variables as nominal, and therefore does not take the ranked nature of the ordinal variables
                                         into account. The Kruskal-Wallis test treats the dependent variable as ordinal but the independent (grouping) variable
@@ -174,7 +174,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     if (numberUniqueValuesDependent > 2 && numberUniqueValuesIndependent == 2) {
                         advice <- "You have entered an ordinal variable for Variable 1 / Dependent Variable and a dichotomous variable for 
                                     Variable 2 / Independent Variables. Hence,
-                                        the <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>
+                                        the <a href= 'https://statkat.com/stattest.php?&t=14&ref=jam' target='_blank'>Mann-Whitney U test</a>
                                         for the difference between two groups on an ordinal variable
                                         seems to be a good option for you! In order to run this test in jamovi, go to:
                                         <br><br>
@@ -186,14 +186,14 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <li>Under Hypothesis, select your alternative hypothesis</li>
                                         </ul>
                                         An alternative option would be the
-                                        <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>.
+                                        <a href= 'https://statkat.com/stattest.php?&t=4&ref=jam' target='_blank'>chi-squared test of association</a>.
                                         Note, however, that the chi-squared test treats both variables as nominal, and therefore does not take the ranked nature of the ordinal variable
                                         into account.<br><br>
                                         Click on the links to learn more about these tests!"
                     }
                     else if (numberUniqueValuesDependent == 2 && numberUniqueValuesIndependent > 2) {
                         advice <- "You have entered a dichotomous variable for Variable 1 / Dependent Variable and a nominal variable for 
-                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
+                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=4&ref=jam' target='_blank'>chi-squared test of association</a>
                                         seems to be a good option for you! In order to run this test in jamovi, go to:
                                         <br><br>
                                         Frequencies > Independent Samples - &chi;<sup>2</sup> test of association
@@ -204,7 +204,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else {
                         advice <- "You have entered an ordinal variable for Variable 1 / Dependent Variable and a nominal variable for 
-                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=17' target='_blank'>Kruskal-Wallis test</a>
+                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=17&ref=jam' target='_blank'>Kruskal-Wallis test</a>
                                         for the difference between several groups on an ordinal variable
                                         seems to be a good option for you! In order to run this test in jamovi, go to:
                                         <br><br>
@@ -213,7 +213,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <li>Drop your dependent variable in the box below Dependent Variables and your independent (the nominal, grouping) variable in the box below Grouping Variable</li>
                                         </ul>
                                         An alternative option would be the
-                                        <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>.
+                                        <a href= 'https://statkat.com/stattest.php?&t=4&ref=jam' target='_blank'>chi-squared test of association</a>.
                                         Note, however, that the chi-squared test treats both variables as nominal, and therefore does not take the ranked nature of the ordinal variable
                                         into account.<br><br>
                                         Click on the links to learn more about these tests!"
@@ -223,7 +223,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 else if (is.factor(dependent) && is.ordered(independent)) {
                     if (numberUniqueValuesDependent > 2 && numberUniqueValuesIndependent == 2) {
                         advice <- "You have entered a nominal variable for Variable 1 / Dependent Variable and a dichotomous variable for 
-                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
+                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=4&ref=jam' target='_blank'>chi-squared test of association</a>
                                         seems to be a good option for you! In order to run this test in jamovi, go to:
                                         <br><br>
                                         Frequencies > Independent Samples - &chi;<sup>2</sup> test of association
@@ -234,27 +234,27 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else if (numberUniqueValuesDependent == 2 && numberUniqueValuesIndependent > 2) {
                         advice <- "You have entered a dichotomous variable for Variable 1 / Dependent Variable and an ordinal variable for 
-                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
+                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=4&ref=jam' target='_blank'>chi-squared test of association</a>
                                         seems to be a good option for you! In order to run this test in jamovi, go to:
                                         <br><br>
                                         Frequencies > Independent Samples - &chi;<sup>2</sup> test of association
                                         <ul>
                                         <li>Put one of your two categorical variables in the box below Rows, and the other categorical variable in the box below Columns</li>
                                         </ul>
-                                        If you would flip variable 1 and variable 2, you could also use the <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>
+                                        If you would flip variable 1 and variable 2, you could also use the <a href= 'https://statkat.com/stattest.php?&t=14&ref=jam' target='_blank'>Mann-Whitney U test</a>
                                         for the difference between two groups on an ordinal variable.<br><br>
                                         Click on the links to learn more about these tests!"
                     }
                     else {
                         advice <- "You have entered a nominal variable for Variable 1 / Dependent Variable and an ordinal variable for 
-                                    Variable 2 / Independent Variables. Hence,the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
+                                    Variable 2 / Independent Variables. Hence,the <a href= 'https://statkat.com/stattest.php?&t=4&ref=jam' target='_blank'>chi-squared test of association</a>
                                         seems to be a good option for you! In order to run this test in jamovi, go to:
                                         <br><br>
                                         Frequencies > Independent Samples - &chi;<sup>2</sup> test of association
                                         <ul>
                                         <li>Put one of your two categorical variables in the box below Rows, and the other categorical variable in the box below Columns</li>
                                         </ul>
-                                        If you would flip variable 1 and variable 2, you could also use the <a href= 'https://statkat.com/stattest.php?&t=17' target='_blank'>Kruskal-Wallis test</a>
+                                        If you would flip variable 1 and variable 2, you could also use the <a href= 'https://statkat.com/stattest.php?&t=17&ref=jam' target='_blank'>Kruskal-Wallis test</a>
                                         for the difference between several groups on an ordinal variable.<br><br>
                                         Click on the links to learn more about these tests!"
                     }
@@ -263,7 +263,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 else if (is.factor(dependent) && is.factor(independent)) {
                     advice <- "You have entered a nominal variable for Variable 1 / Dependent Variable and a nominal variable for 
                                     Variable 2 / Independent Variables. Both variables consist of two or more groups. 
-                                    Hence, the <a href= 'https://statkat.com/stattest.php?&t=4' target='_blank'>chi-squared test of association</a>
+                                    Hence, the <a href= 'https://statkat.com/stattest.php?&t=4&ref=jam' target='_blank'>chi-squared test of association</a>
                                         seems to be a good option for you! In order to run this test in jamovi, go to:
                                         <br><br>
                                         Frequencies > Independent Samples - &chi;<sup>2</sup> test of association
@@ -275,8 +275,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
                 else if (is.numeric(dependent) && is.factor(independent) && numberUniqueValuesIndependent == 2) {
                     advice <- "You have entered a numeric variable for Variable 1 / Dependent Variable and a dichotomous variable for 
-                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=10' target='_blank'>two sample <i>t</i> test assuming equal population variances</a>
-                                    or the <a href= 'https://statkat.com/stattest.php?&t=9' target='_blank'>two sample <i>t</i> test not assuming equal population variances</a>
+                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=10&ref=jam' target='_blank'>two sample <i>t</i> test assuming equal population variances</a>
+                                    or the <a href= 'https://statkat.com/stattest.php?&t=9&ref=jam' target='_blank'>two sample <i>t</i> test not assuming equal population variances</a>
                                     seems to be a good option for you! Both tests are tests for the difference between two population means.
                                     In order to run these tests in jamovi, go to:
                                     <br><br>
@@ -288,13 +288,13 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     <li>Under Hypothesis, select your alternative hypothesis</li>
                                     </ul>
                                     If the normality assumption is violated, you could use the non-parametric
-                                    <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>.
+                                    <a href= 'https://statkat.com/stattest.php?&t=14&ref=jam' target='_blank'>Mann-Whitney U test</a>.
                                     Click on the links to learn more about these tests!"
                 }
 
                 else if (is.numeric(dependent) && is.ordered(independent)) {
                     advice <- "You have entered a numeric variable for Variable 1 / Dependent Variable and an ordinal variable for 
-                                    Variable 2 / Independent Variables. Hence, <a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Spearman's rank correlation coefficient</a>,
+                                    Variable 2 / Independent Variables. Hence, <a href= 'https://statkat.com/stattest.php?&t=18&ref=jam' target='_blank'>Spearman's rank correlation coefficient</a>,
                                         which is a measure for the strength of the monotonic relationship between two variables,
                                         seems to be a good option for you! In order to run this analysis in , go to:
                                         <br><br>
@@ -305,7 +305,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                         <li>Under Correlation Coefficients, select Spearman</li>
                                         <li>Under Hypothesis, select your alternative hypothesis</li>
                                         </ul>
-                                        An alternative option would be <a href= 'https://statkat.com/stattest.php?&t=11' target='_blank'>one way ANOVA</a>, which is
+                                        An alternative option would be <a href= 'https://statkat.com/stattest.php?&t=11&ref=jam' target='_blank'>one way ANOVA</a>, which is
                                         is a test for the difference between several population means. Your numeric variable would be the dependent
                                         variable and your ordinal variable would be the independent variable (grouping factor).<br><br>
                                         The disadvantage of the one way ANOVA is that it will not take the ranked nature of the ordinal
@@ -317,7 +317,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
                 else if (is.numeric(dependent) && is.factor(independent)) {
                     advice <- "You have entered a numeric variable for Variable 1 / Dependent Variable and a nominal variable for 
-                                    Variable 2 / Independent Variables. Hence, a <a href= 'https://statkat.com/stattest.php?&t=11' target='_blank'>one way ANOVA</a>, which is
+                                    Variable 2 / Independent Variables. Hence, a <a href= 'https://statkat.com/stattest.php?&t=11&ref=jam' target='_blank'>one way ANOVA</a>, which is
                                         is a test for the difference between several population means,
                                     seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                     <br><br>
@@ -326,14 +326,14 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     <li>Drop your dependent (numeric) variable in the box below Dependent Variable and your independent (grouping) variable in the box below Fixed Factors</li>
                                     </ul>
                                     If the normality or homoscedasticity assumption is violated, you could use the non-parametric
-                                    <a href= 'https://statkat.com/stattest.php?&t=17' target='_blank'>Kruskal-Wallis test</a>.
+                                    <a href= 'https://statkat.com/stattest.php?&t=17&ref=jam' target='_blank'>Kruskal-Wallis test</a>.
                                     <br><br>
                                     Click on the links to learn more about these tests!"
                 }
 
                 else if (is.factor(dependent) && is.numeric(independent) && numberUniqueValuesDependent == 2) {
                     advice <- "You have entered a dichotomous variable for Variable 1 / Dependent Variable and a numeric variable for 
-                                    Variable 2 / Independent Variables. Hence, <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
+                                    Variable 2 / Independent Variables. Hence, <a href= 'https://statkat.com/stattest.php?&t=20&ref=jam' target='_blank'>logistic regression analysis</a> 
                                     seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                     <br><br>
                                     Regression > 2 Outcomes - Binomial
@@ -341,8 +341,8 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     <li>Drop your dependent (dichotomous) variable in the box below Dependent Variable and your independent (numeric) variable in the box below Covariates
                                     </li>
                                     </ul>
-                                    If you would flip variable 1 and variable 2, you could also perform a <a href= 'https://statkat.com/stattest.php?&t=10&t2=9' target='_blank'>two sample <i>t</i> test</a>
-                                    for the difference between two population means, or the non-parametric <a href= 'https://statkat.com/stattest.php?&t=14' target='_blank'>Mann-Whitney U test</a>. 
+                                    If you would flip variable 1 and variable 2, you could also perform a <a href= 'https://statkat.com/stattest.php?&t=10&t2=9&ref=jam' target='_blank'>two sample <i>t</i> test</a>
+                                    for the difference between two population means, or the non-parametric <a href= 'https://statkat.com/stattest.php?&t=14&ref=jam' target='_blank'>Mann-Whitney U test</a>. 
                                     Your numeric variable would be the dependent
                                     variable and your dichotomous variable would be the independent variable (grouping factor).
                                     <br><br>
@@ -351,7 +351,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
                 else if (is.ordered(dependent) && is.numeric(independent)) {
                     advice <- "You have entered an ordinal variable for Variable 1 / Dependent Variable and a numeric variable for 
-                                    Variable 2 / Independent Variables. Hence, <a href= 'https://statkat.com/stattest.php?&t=18' target='_blank'>Spearman's rank correlation coefficient</a>,
+                                    Variable 2 / Independent Variables. Hence, <a href= 'https://statkat.com/stattest.php?&t=18&ref=jam' target='_blank'>Spearman's rank correlation coefficient</a>,
                                     which is a measure for the strength of the monotonic relationship between two variables,
                                     seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                     <br><br>
@@ -368,7 +368,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     the Spearman correlation is a much easier option than ordinal logistic regression. Also, ordinal logistic regression
                                     is currently not available in jamovi, so you would need to find other software to perform the analysis (e.g., R or SPSS).
                                     <br><br>
-                                    Finally, if you would flip variable 1 and variable 2, you could also perform a <a href= 'https://statkat.com/stattest.php?&t=11' target='_blank'>one way ANOVA</a>, which is
+                                    Finally, if you would flip variable 1 and variable 2, you could also perform a <a href= 'https://statkat.com/stattest.php?&t=11&ref=jam' target='_blank'>one way ANOVA</a>, which is
                                     a test for the difference between several population means. Your numeric variable would be the dependent
                                     variable and your ordinal variable would be the independent variable (grouping factor). The disadvantage of the one way ANOVA is that it will not take the ranked nature of the ordinal
                                     independent variable into account. That is, it will treat the ordinal independent variable as a nominal variable.
@@ -385,9 +385,9 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     <li>Drop your dependent (nominal) variable in the box below Dependent Variable and your independent (numeric) variable in the box below Covariates
                                     </li>
                                     </ul>
-                                    If you would flip variable 1 and variable 2, you could also perform a <a href= 'https://statkat.com/stattest.php?&t=11' target='_blank'>one way ANOVA</a>,
+                                    If you would flip variable 1 and variable 2, you could also perform a <a href= 'https://statkat.com/stattest.php?&t=11&ref=jam' target='_blank'>one way ANOVA</a>,
                                     which is a test for the difference between several population means, 
-                                    or the non-parametric <a href= 'https://statkat.com/stattest.php?&t=17' target='_blank'>Kruskal-Wallis test</a>. Your numeric variable would be the dependent
+                                    or the non-parametric <a href= 'https://statkat.com/stattest.php?&t=17&ref=jam' target='_blank'>Kruskal-Wallis test</a>. Your numeric variable would be the dependent
                                     variable and your nominal variable would be the independent variable (grouping factor).
                                     Click on the links to learn more about these methods!"
                 }
@@ -395,7 +395,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
                 else if (is.numeric(dependent) && is.numeric(independent)) {
                     advice <- "You have entered a numeric variable for Variable 1 / Dependent Variable and a numeric variable for 
-                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=19' target='_blank'>Pearson correlation coefficient</a>,
+                                    Variable 2 / Independent Variables. Hence, the <a href= 'https://statkat.com/stattest.php?&t=19&ref=jam' target='_blank'>Pearson correlation coefficient</a>,
                                     which is a measure for the strength of the linear relationship between two variables,
                                     seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                     <br><br>
@@ -407,7 +407,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     <li>Under Hypothesis, select your alternative hypothesis</li>
                                     </ul>
                                     Alternatively, you could perform a
-                                    <a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a>. The test outcomes of
+                                    <a href= 'https://statkat.com/stattest.php?&t=13&ref=jam' target='_blank'>linear regression analysis</a>. The test outcomes of
                                     both methods will be equivalent.
                                     <br><br>
                                     Click on the links to learn more about these methods!"
@@ -450,7 +450,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 if (is.factor(dependent) && numberUniqueValuesDependent == 2) {
                     if (any(independentNeedsDummy) && !any(independentDichotomous)) {
                         advice <- paste("You have entered a dichotomous dependent variable and several independent variables. 
-                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
+                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=20&ref=jam' target='_blank'>logistic regression analysis</a> 
                                          seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                          <br><br>
                                          Regression > 2 Outcomes - Binomial",
@@ -460,7 +460,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else if (any(independentCategorical)) {
                         advice <- paste("You have entered a dichotomous dependent variable and several independent variables. 
-                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
+                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=20&ref=jam' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                         <br><br>
                                         Regression > 2 Outcomes - Binomial",
@@ -469,7 +469,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else {
                         advice <- paste("You have entered a dichotomous dependent variable and several numeric independent variables. 
-                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
+                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=20&ref=jam' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                         <br><br>
                                         Regression > 2 Outcomes - Binomial",
@@ -512,7 +512,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     if (all(independentCategorical)) {
                         if (length(namesIndependents) == 2) {
                             advice <- "You have entered a numeric dependent variable and two categorical (nominal/ordinal) independent variables. 
-                                            Hence, a <a href= 'https://statkat.com/stattest.php?&t=12' target='_blank'>two way ANOVA</a>
+                                            Hence, a <a href= 'https://statkat.com/stattest.php?&t=12&ref=jam' target='_blank'>two way ANOVA</a>
                                             seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                             <br><br>
                                             ANOVA > ANOVA
@@ -538,7 +538,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     else if (any(independentNeedsDummy) && !any(independentDichotomous)) {
                         advice <- paste("You have entered a numeric dependent variable and several independent variables. Some independent variables are numeric
                                         and some independent variables are categorical (nominal/ordinal). 
-                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
+                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=13&ref=jam' target='_blank'>linear regression analysis</a> 
                                         seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                         <br><br>
                                         Regression > Linear Regression",
@@ -548,7 +548,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     else if (any(independentCategorical)) {
                         advice <-  paste("You have entered a numeric dependent variable and several independent variables. Some independent variables are numeric
                                         and some independent variables are categorical (nominal/ordinal). 
-                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
+                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=13&ref=jam' target='_blank'>linear regression analysis</a> 
                                          seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                          <br><br>
                                          Regression > Linear Regression",
@@ -557,7 +557,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else {
                         advice <- paste("You have entered a numeric dependent variable and several numeric independent variables. 
-                                        Hence, <a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
+                                        Hence, <a href= 'https://statkat.com/stattest.php?&t=13&ref=jam' target='_blank'>linear regression analysis</a> 
                                         seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                         <br><br>
                                         Regression > Linear Regression",
@@ -606,7 +606,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 if (is.factor(dependent) && numberUniqueValuesDependent == 2) {
                     if ((any(independentNeedsDummy) || any(controlNeedsDummy)) && !any(independentDichotomous) && !any(controlDichotomous)) {
                         advice <- paste("You have entered a dichotomous dependent variable, one or more independent variables, and one or more control variables. Hence, 
-                                        <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
+                                        <a href= 'https://statkat.com/stattest.php?&t=20&ref=jam' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                         <br><br>
                                         Regression > 2 Outcomes - Binomial",
@@ -615,7 +615,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else if (any(independentCategorical) || any(controlCategorical)) {
                         advice <- paste("You have entered a dichotomous dependent variable, one or more independent variables, and one or more control variables. Hence, 
-                                        <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
+                                        <a href= 'https://statkat.com/stattest.php?&t=20&ref=jam' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                         <br><br>
                                         Regression > 2 Outcomes - Binomial",
@@ -624,7 +624,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else {
                         advice <- paste("You have entered a dichotomous dependent variable, one or more numeric independent variables, and one or more numeric control variables. Hence, 
-                                        <a href= 'https://statkat.com/stattest.php?&t=20' target='_blank'>logistic regression analysis</a> 
+                                        <a href= 'https://statkat.com/stattest.php?&t=20&ref=jam' target='_blank'>logistic regression analysis</a> 
                                         seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                         <br><br>
                                         Regression > 2 Outcomes - Binomial",
@@ -671,7 +671,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                         if (length(namesIndependents) == 1 && length(namesControls) == 1) {
                             advice <- "You have entered a numeric dependent variable, a categorical (nominal/ordinal) independent variable, and a 
                                         categorical (nominal/ordinal) control variable.  
-                                        Hence, a <a href= 'https://statkat.com/stattest.php?&t=12' target='_blank'>two way ANOVA</a>
+                                        Hence, a <a href= 'https://statkat.com/stattest.php?&t=12&ref=jam' target='_blank'>two way ANOVA</a>
                                             seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                             <br><br>
                                             ANOVA > ANOVA
@@ -724,7 +724,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     else if ((any(independentNeedsDummy) || any(controlNeedsDummy)) && !any(independentDichotomous) && !any(controlDichotomous)) {
                         advice <- paste("You have entered a numeric dependent variable, one or more independent variables, and one or more control variables.
                                         At least some of your independent variables are numeric.   
-                                        Hence, a <a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
+                                        Hence, a <a href= 'https://statkat.com/stattest.php?&t=13&ref=jam' target='_blank'>linear regression analysis</a> 
                                           seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                           <br><br>
                                           Regression > Linear Regression",
@@ -734,7 +734,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     else if (any(independentCategorical) || any(controlCategorical)) {
                         advice <- paste("You have entered a numeric dependent variable, one or more independent variables, and one or more control variables.
                                         At least some of your independent variables are numeric. Hence, 
-                                      <a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
+                                      <a href= 'https://statkat.com/stattest.php?&t=13&ref=jam' target='_blank'>linear regression analysis</a> 
                                      seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                      <br><br>
                                      Regression > Linear Regression",
@@ -743,7 +743,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                     else {
                         advice <- paste("You have entered a numeric dependent variable, one or more numeric independent variables, and one or more numeric control variables.
-                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=13' target='_blank'>linear regression analysis</a> 
+                                         Hence, <a href= 'https://statkat.com/stattest.php?&t=13&ref=jam' target='_blank'>linear regression analysis</a> 
                                          seems to be a good option for you! In order to run this analysis in jamovi, go to:
                                          <br><br>
                                          Regression > Linear Regression",
