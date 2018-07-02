@@ -53,7 +53,7 @@ correlationalResults <- if (requireNamespace('jmvcore')) R6::R6Class(
             super$initialize(
                 options=options,
                 name="",
-                title="Correlational Research")
+                title="Multiple Variables / Independent Groups")
             self$add(jmvcore::Html$new(
                 options=options,
                 name="advice",
@@ -101,10 +101,11 @@ correlationalBase <- if (requireNamespace('jmvcore')) R6::R6Class(
                 completeWhenFilled = TRUE)
         }))
 
-#' Correlational Research
+#' Multiple Variables / Independent Groups
 #'
 #' Provides a recommended statistical method given the measurement level of 
-#' your data. Appropriate for correlational research.
+#' your data. Appropriate when the interest is in the relationship between 
+#' variables.
 #'
 #' @examples
 #' exampleData <- data.frame(x1 = rnorm(20),
