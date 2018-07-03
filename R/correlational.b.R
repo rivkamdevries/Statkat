@@ -17,11 +17,11 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                           Make sure you have correctly defined the measurement levels of your variables on the Data tab. You can change the measurement level
                           of a variable via the Setup button on the Data tab, or by double clicking on a column header of interest. 
                           <br><br>
-                          You have selected the Multiple Variables / Independent Groups option. This is the place to be if you are interested in
+                          You have selected the Relationships, Prediction, and Group Comparisons option. This is the place to be if you are interested in
                           <ul>
                           <li>the relationship between two or more variables, or
-                          <li>the difference between independent (unrelated) groups on a certain variable, or</li>
-                          <li>predicting one variable from other variables.</li>
+                          <li>predicting one variable from other variables, or</li>
+                          <li>the difference between independent (unrelated) groups on a certain variable.</li>
                           </ul>
                           To get started, drop a 
                           variable in the box below Variable 1 / Dependent Variable, and one or more variables in the box below Variable 2 / 

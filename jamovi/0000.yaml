@@ -20,11 +20,11 @@ analyses:
     description: >-
       Provides a recommended statistical method given the measurement level of
       your data. Appropriate when you are interested in a single variable.
-  - title: Multiple Variables / Independent Groups
+  - title: 'Relationships, Prediction, and Group Comparisons'
     name: correlational
     ns: Statkat
     menuGroup: Statkat
-    menuTitle: Multiple Variables / Independent Groups
+    menuTitle: 'Relationships, Prediction, and Group Comparisons'
     description: >-
       Provides a recommended statistical method given the measurement level of
       your data. Appropriate when the interest is in the relationship between
