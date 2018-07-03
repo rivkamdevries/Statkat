@@ -48,7 +48,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
 
             if (is.factor(var) && numberUniqueValues == 2) {
                 advice <- "You have entered a dichotomous variable. Hence, the 
-                          <a href= 'https://statkat.com/stattest.php?&t=44&ref=jam' target='_blank'>Binomial test</a> for the population proportion of 'successes' 
+                          <a href= 'https://statkat.com/stattest.php?&t=44&ref=jamovi' target='_blank'>Binomial test</a> for the population proportion of 'successes' 
                           may be a good option for you!
                            It tests whether the population proportion of successes, or the true probability of a success, is different from a certain hypothesized value, denoted &pi;<sub>0</sub>.
                            In order to run this test in jamovi, go to:
@@ -63,7 +63,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             }
             else if (is.ordered(var)) {
                 advice <- "You have entered a variable of ordinal measurement level. Hence, 
-                           the <a href= 'https://statkat.com/stattest.php?&t=42&ref=jam' target='_blank'>Wilcoxon signed-rank test</a> for the population median
+                           the <a href= 'https://statkat.com/stattest.php?&t=42&ref=jamovi' target='_blank'>Wilcoxon signed-rank test</a> for the population median
                            may be a good option for you! In order to run this test in jamovi, go to:
                            <br><br>
                            T-Tests > One Sample T-Test
@@ -76,7 +76,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             }
             else if (is.factor(var)) {
                 advice <- "You have entered a variable of nominal measurement level. Hence, 
-                           the  <a href= 'https://statkat.com/stattest.php?&t=3&ref=jam' target='_blank'>goodness of fit test</a>
+                           the  <a href= 'https://statkat.com/stattest.php?&t=3&ref=jamovi' target='_blank'>goodness of fit test</a>
                            may be a good option for you! In order to run this test in jamovi, go to:
                            <br><br>
                            Frequencies > N Outcomes - &Chi;<sup>2</sup> Goodness of fit
@@ -89,7 +89,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
             }
             else if (is.numeric(var)) {
                 advice <- "You have entered a numeric variable. Hence, 
-                           the  <a href= 'https://statkat.com/stattest.php?&t=6&ref=jam' target='_blank'>one sample <i>t</i> test</a> for the population mean
+                           the  <a href= 'https://statkat.com/stattest.php?&t=6&ref=jamovi' target='_blank'>one sample <i>t</i> test</a> for the population mean
                 may be a good option for you! In order to run this test in jamovi, go to:
                 <br><br>
                 T-Tests > One Sample T-Test
@@ -98,7 +98,7 @@ singleClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     <li>Under Hypothesis, fill in the value for &mu;<sub>0</sub> in the box next to Test Value, and select your alternative hypothesis</li>
                 </ul>
                 If the normality assumption is violated, you could use the non-parametric
-                <a href= 'https://statkat.com/stattest.php?&t=42&ref=jam' target='_blank'>Wilcoxon signed-rank test</a> for the population median instead.
+                <a href= 'https://statkat.com/stattest.php?&t=42&ref=jamovi' target='_blank'>Wilcoxon signed-rank test</a> for the population median instead.
                 <br><br>
                 Click on the links to learn more about these tests!"
             }
