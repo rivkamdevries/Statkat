@@ -365,8 +365,7 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                                     An alternative option would be ordinal logistic regression, with your ordinal variable as dependent variable and your
                                     numeric variable as independent variable. The advantage of this method is that it treats the
                                     numeric variable as an interval variable, whereas the Spearman correlation treats both variables as ordinal. However,
-                                    the Spearman correlation is a much easier option than ordinal logistic regression. Also, ordinal logistic regression
-                                    is currently not available in jamovi, so you would need to find other software to perform the analysis (e.g., R or SPSS).
+                                    the Spearman correlation is a much easier option than ordinal logistic regression.
                                     <br><br>
                                     Finally, if you would flip variable 1 and variable 2, you could also perform a <a href= 'https://statkat.com/stattest.php?&t=11&ref=jamovi' target='_blank'>one way ANOVA</a>, which is
                                     a test for the difference between several population means. Your numeric variable would be the dependent
@@ -478,9 +477,30 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                     }
                 }
                 else if (is.ordered(dependent)) {
-                    advice <- paste("You have entered an ordinal dependent variable and several independent variables. 
-                                         Hence, ordinal logistic regression analysis seems to be a good option for you! Ordinal logistic regression
-                                     is currently not available in jamovi. You could use other software to perform the analysis (e.g., R or SPSS).")
+                    if (any(independentNeedsDummy) && !any(independentDichotomous)) {
+                        advice <- paste("You have entered an ordinal dependent variable and several independent variables. 
+                                         Hence, ordinal logistic regression analysis seems to be a good option for you! 
+                                         In order to run this analysis in jamovi, go to:
+                                        <br><br>
+                                    Regression > Ordinal Outcomes",
+                                    stepsNoControlsCodeVars)
+                    }
+                    else if (any(independentCategorical)) {
+                        advice <- paste("You have entered an ordinal dependent variable and several independent variables. 
+                                            Hence, ordinal logistic regression analysis
+                                            seems to be a good option for you! In order to run this analysis in jamovi, go to:
+                                            <br><br>
+                                            Regression > Ordinal Outcomes",
+                                        stepsNoControlsCategorical)
+                    }
+                    else {
+                        advice <- paste("You have entered an ordinal dependent variable and several numeric independent variables. 
+                                             Hence, ordinal logistic regression analysis
+                                            seems to be a good option for you! In order to run this analysis in jamovi, go to:
+                                            <br><br>
+                                            Regression > Ordinal Outcomes",
+                                        stepsNoControlsAllNumeric)
+                    }
                 }
                 else if (is.factor(dependent)) {
                     if (any(independentNeedsDummy) && !any(independentDichotomous)) {
@@ -634,9 +654,30 @@ correlationalClass <- if (requireNamespace('jmvcore')) R6::R6Class(
                 }
 
                 else if (is.ordered(dependent)) {
+                  if ((any(independentNeedsDummy) || any(controlNeedsDummy)) && !any(independentDichotomous) && !any(controlDichotomous)) {
                     advice <- paste("You have entered an ordinal dependent variable, one or more independent variables, and one or more control variables. 
-                                    Hence, ordinal logistic regression analysis seems to be a good option for you! Ordinal logistic regression
-                                    is currently not available in jamovi. You could use other software to perform the analysis (e.g., R or SPSS).")
+                                    Hence, ordinal logistic regression
+                                    seems to be a good option for you! In order to run this analysis in jamovi, go to:
+                                    <br><br>
+                                    Regression > Ordinal Outcomes",
+                                    stepsWithControlsCodeVars)
+                  }
+                  else if (any(independentCategorical) || any(controlCategorical)) {
+                    advice <- paste("You have entered an ordinal dependent variable, one or more independent variables, and one or more control variables. 
+                                    Hence, ordinal logistic regression
+                                    seems to be a good option for you! In order to run this analysis in jamovi, go to:
+                                    <br><br>
+                                     Regression > Ordinal Outcomes",
+                                    stepsWithControlsCategorical)
+                  }
+                  else {
+                    advice <- paste("You have entered an ordinal dependent variable, one or more numeric independent variables, and one or more numeric control variables. 
+                                    Hence, ordinal logistic regression
+                                    seems to be a good option for you! In order to run this analysis in jamovi, go to:
+                                    <br><br>
+                                     Regression > Ordinal Outcomes",
+                                    stepsWithControlsAllNumeric)
+                  }
                 }
 
                 else if (is.factor(dependent)) {
